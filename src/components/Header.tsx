@@ -1,5 +1,5 @@
 "use client";
-import { link } from "fs";
+
 import { useState } from "react";
 
 export default function Header() {
@@ -28,6 +28,16 @@ export default function Header() {
              ☰
           </button>
       </nav>
+        {isOpen && (
+          <ul className="md:hidden flex flex-col items-center bg-gray-900/95 space-y-4 py-4">
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={() => setIsOpen(false)}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
+        )}
+
     </header>
   );
 }
