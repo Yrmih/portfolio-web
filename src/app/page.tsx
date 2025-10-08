@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <Hero id="home" />
+        <Hero />
         <About id="about" />
         <Skills id="skills" />
         <Projects id="projects" />
