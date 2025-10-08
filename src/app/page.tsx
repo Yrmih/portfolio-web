@@ -12,11 +12,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <About id="about" />
-        <Skills id="skills" />
-        <Projects id="projects" />
-        <Contact id="contact" />
-        <Footer id="footer" />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
       </main>
     </>
   );
