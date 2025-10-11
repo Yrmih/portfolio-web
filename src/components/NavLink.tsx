@@ -24,5 +24,11 @@ export default function NavLink({ href, children }: NavLinkProps) {
     return () => window.removeEventListener("scroll", handleScroll);
 
   }, [href]);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const section = document.querySelector(href);
+    section?.scrollIntoView({behavior: "smooth"});
+  }
   return <a href=""></a>;
 }
