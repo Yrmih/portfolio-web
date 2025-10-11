@@ -17,7 +17,7 @@ export default function Contact({ id }: { id: string }) {
       </p>
 
       <div>
-        <a href=""></a>
+        <a href="91 98131-2498" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-6 bg-blue-600 roudend-full hover: bg-gray-700"></a>
 
         <a href=""></a>
 
