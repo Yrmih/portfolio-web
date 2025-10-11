@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import NavLink from "./NavLink";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,7 @@ export default function Header() {
         <ul className="hidden md:flex space-x-6">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="hover:text-blue-500">
-                {link.name}
-              </a>
+              <NavLink href={link.href}>{link.name}</NavLink>
             </li>
           ))}
         </ul>
@@ -33,9 +32,7 @@ export default function Header() {
         <ul className="md:hidden flex flex-col items-center bg-gray-900/95 space-y-4 py-4">
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={() => setIsOpen(false)}>
-                {link.name}
-              </a>
+              <NavLink href={link.href}>{link.name}</NavLink>
             </li>
           ))}
         </ul>
