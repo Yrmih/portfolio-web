@@ -20,7 +20,7 @@ export default function Contact({ id }: { id: string }) {
         href="91 98131-2498"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 px-6 py-6 bg-green-600 roudend-full hover: bg-gray-700 transition-colors mb-12"
+        className="flex items-center gap-2 px-6 py-6 roudend-full hover: bg-gray-700 transition-colors mb-12"
       >
         <span>Fale comigo no WhatsApp</span>
         <MessageCircle className="w-5 h-5" />
