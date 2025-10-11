@@ -1,8 +1,10 @@
-export default function About(){
-  return(
-   <section>
-    <h2>Sobre mim</h2>
-    <p>Sou desenvolvedor Fullstack, focado em construir aplicações modernas e escaláveis utilizando TypeScript. No meu trabalho, utilizo uma variedade de frameworks para o front-end e o back-end, garantindo a melhor solução para cada projeto. Tenho experiência com tecnologias como Angular, React, Node.js, Express, entre outros, sempre buscando otimizar o desempenho e garantir uma boa experiência para o usuário final.</p>
-   </section>
+export default function About({ id }: { id: string }) {
+  return (
+    <section id={id} className="min-h-screen flex flex-col justify-center items-center p-8">
+      <h2 className="text-4xl font-bold mb-4">Sobre mim</h2>
+      <p className="max-w-2xl text-center text-gray-300">
+        Sou desenvolvedor Front-end em transição para Fullstack, focado em construir aplicações modernas e responsivas usando Next.js, Tailwind CSS e TypeScript.
+      </p>
+    </section>
   );
 }
