@@ -19,6 +19,10 @@ export default function NavLink({ href, children }: NavLinkProps) {
       const isVisible = rect.top<= window.innerHeight/ 2 && rect.bottom >=0;
       setActive(isVisible);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+
   }, [href]);
   return <a href=""></a>;
 }
