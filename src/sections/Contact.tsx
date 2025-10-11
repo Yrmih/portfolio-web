@@ -16,16 +16,48 @@ export default function Contact({ id }: { id: string }) {
         transformar suas ideias em projetos digitais incríveis e funcionais.
       </p>
 
-      <div>
-        <a href="91 98131-2498" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-6 bg-green-600 roudend-full hover: bg-gray-700"></a>
+      <a
+        href="91 98131-2498"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-6 py-6 bg-green-600 roudend-full hover: bg-gray-700 transition-colors mb-12"
+      >
+        <span>Fale comigo no WhatsApp</span>
+        <MessageCircle className="w-5 h-5" />
+      </a>
 
-        <a href=""></a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+        <a
+          href="email:yrmihiangoncalvesdelima@gmail.com"
+          className="flex items-center gap-2 bg-gray-800 px-5 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          <Mail className="w-5 h-5 text-blue-400" />
+          <span>yrmihiangoncalvesdelima@gmail.com</span>
+        </a>
 
-        <a href=""></a>
+        <a
+          href="https://github.com/Yrmih"
+          className="flex items-center gap-2 bg-gray-800 px-5 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          <Github className="w-5 h-5 text-blue-400" />
+          <span>Github</span>
+        </a>
 
-        <a href=""></a>
+        <a
+          href="https://www.linkedin.com/in/yrmihian"
+          className="flex items-center gap-2 bg-gray-800 px-5 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          <Linkedin className="w-5 h-5 text-blue-400" />
+          <span>LinkedIn</span>
+        </a>
 
-        <a href=""></a>
+        <a
+          href="https://www.instagram.com/yrmih.ian/"
+          className="flex items-center gap-2 bg-gray-800 px-5 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          <Instagram className="w-5 h-5 text-blue-400" />
+          <span>Instagram</span>
+        </a>
       </div>
     </section>
   );
