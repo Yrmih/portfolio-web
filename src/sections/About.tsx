@@ -38,7 +38,6 @@ export default function About({ id }: { id: string }) {
         entregar projetos de alto impacto.
       </motion.p>
 
-      {/* Blocos principais */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
