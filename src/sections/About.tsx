@@ -35,8 +35,39 @@ export default function About({ id }: { id: string }) {
         </div>
       </div>
 
-      <div>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full">
+        <div className="p-6 bg-gray-800 rounded-2xl shadow-lg">
+          <h3 className="text-2xl font-bold mb-4 text-blue-400">Quem Sou Eu</h3>
+          <p className="text-gray-300 leading-relaxed text-justify">
+            Me chamo <strong>Yrmih Ian Gonçalves de Lima</strong>, tenho 30 anos
+            e sou de <strong>Ananindeua - PA</strong>. Estudo{" "}
+            <strong>Análise e Desenvolvimento de Sistemas</strong> na
+            Universidade Estácio de Sá.
+            <br />
+            <br />
+            Estagiei por 2 anos na{" "}
+            <strong>Defensoria Pública do Estado do Pará</strong> como
+            desenvolvedor Front-end, onde desenvolvi e implementei WebApps,
+            SPAs, CSR (Client-Side Rendering) e SSR (Server-Side Rendering),
+            utilizando tecnologias como{" "}
+            <strong>
+              Next.js, TypeScript, TailwindCSS, ShadCN + Zod, React Hook Form
+            </strong>{" "}
+            e <strong>Vite Testing</strong>.
+            <br />
+            <br />
+            Também atuo com frameworks server-side TypeScript/JavaScript como{" "}
+            <strong>NestJS, TypeORM, Prisma, Express</strong> e APIs REST,
+            realizando integrações com bancos <strong>PostgreSQL, MySQL</strong>{" "}
+            e configurações com <strong>Docker</strong>.
+            <br />
+            <br />
+            Atualmente, estou em aprendizado sobre aplicações em nuvem com{" "}
+            <strong>AWS</strong>. Paralelamente, trabalho como{" "}
+            <strong>Desenvolvedor Fullstack Freelancer</strong>, criando
+            soluções personalizadas e focadas nas necessidades dos clientes.
+          </p>
+        </div>
       </div>
     </section>
   );
