@@ -24,6 +24,21 @@ export default function Skills({ id }: SkillsProps) {
     { name: "Figma", icon: "/icons/figma.svg" },
     { name: "Postman", icon: "/icons/postman.svg" },
   ];
+
+  const container = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { staggerChildren: 0.1, duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, scale: 0.8, y: 30 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
+  };
+  
   return (
     <section
       id={id}
