@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ export default function Skills({ id }: SkillsProps) {
     { name: "HTML5", icon: "/icons/html5.svg" },
     { name: "CSS3", icon: "/icons/css3.svg" },
     { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
-    { name: "Angular", icon: "/icons/angular.svg" },
+    { name: "Angular", icon: "/icons/angular.svg" }, 
     { name: "Node.js", icon: "/icons/nodejs.svg" },
     { name: "Express", icon: "/icons/express.svg" },
     { name: "NestJS", icon: "/icons/nestjs.svg" },
@@ -27,12 +28,13 @@ export default function Skills({ id }: SkillsProps) {
     { name: "Postman", icon: "/icons/postman.svg" },
   ];
 
+ 
   const container = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { staggerChildren: 0.1, duration: 0.6, ease: "easeOut" },
+      transition: { staggerChildren: 0.1, duration: 0.6, ease: [0.4, 0, 0.2, 1] },
     },
   };
 
@@ -44,42 +46,35 @@ export default function Skills({ id }: SkillsProps) {
   return (
     <section
       id={id}
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-[#0b0b22] to-[#050512]"
+      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-900 text-white"
     >
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-4xl font-bold text-indigo-400 mb-4 text-center"
-      >
-        Minhas Stacks
-      </motion.h2>
-      <p className="text-gray-300 text-center max-w-2xl mb-12">
-        Ferramentas e tecnologias que utilizo para criar soluções modernas e
-        eficientes.
-      </p>
+      <h2 className="text-4xl font-bold mb-8">Skills</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        exit="hidden"
+        viewport={{ once: false, amount: 0.2 }}
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+      >
         {skills.map((skill) => (
-          <div
+          <motion.div
             key={skill.name}
-            className="flex flex-col items-center gap-2 bg-[#11112b] hover:bg-[#1b1b3a] transition-all rounded-2xl p-6 shadow-md shadow-black/30 hover:scale-105 hover:shadow-indigo-500/20"
+            variants={item}
+            className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium hover:bg-blue-600 hover:scale-105 transition-all duration-300"
           >
-            <div className="relative w-12 h-12">
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                fill
-                className="object-contain"
-              />
-            </div>
-            <span className="text-gray-200 text-sm font-medium">
-              {skill.name}
-            </span>
-          </div>
+            <Image
+              src={skill.icon}
+              alt={skill.name}
+              width={40}
+              height={40}
+              className="mx-auto mb-2"
+            />
+            <span>{skill.name}</span>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
