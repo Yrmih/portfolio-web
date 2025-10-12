@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, MessageCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -8,30 +9,39 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white px-4"
     >
-      <p className="text-lg text-gray-400 mb-2">Olá, me chamo</p>
+      <p className="text-lg text-gray-400 mb-2">Olá, eu sou</p>
       <h1 className="text-6xl md:text-7xl font-bold mb-4">Yrmih Ian</h1>
       <p className="text-xl text-gray-400 mb-8">Desenvolvedor Full Stack</p>
-      <a
-        href="#about"
-        className="px-6 py-3 bg-blue-500 rounded hover:bg-blue-600"
-      >
-        Ver mais
-      </a>
 
       <div className="flex flex-col md:flex-row gap-4 mb-16">
         <a
           href="#portfolio"
-          className="px-6 py-3 bg-blue-500 rounded hover:bg-blue-600 transition"
+          className="relative px-6 py-3 rounded overflow-hidden group font-semibold text-white"
         >
-          Conheça meu Trabalho
+          <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
+          <span className="relative z-10">Conheça meu trabalho</span>
         </a>
-        <a
+
+        <motion.a
           href="#contact"
-          className="px-6 py-3 border border-blue-500 rounded hover:bg-blue-500 hover:text-white transition"
+          className="relative flex items-center gap-3 px-6 py-3 rounded bg-blue-600 hover:bg-blue-700 transition"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          Fale comigo
-        </a>
+          <MessageCircle className="w-6 h-6 text-white" />
+          <span className="text-lg font-semibold text-white">
+            Fale comigo
+          </span>
+        </motion.a>
       </div>
+
+      <a
+        href="#about"
+        className="flex flex-col items-center text-gray-400 hover:text-white transition"
+      >
+        Ver mais
+        <ArrowDown className="animate-bounce mt-2" size={24} />
+      </a>
     </section>
   );
 }
