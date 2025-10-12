@@ -68,6 +68,36 @@ export default function About({ id }: { id: string }) {
             soluções personalizadas e focadas nas necessidades dos clientes.
           </p>
         </div>
+
+        <div className="p-6 bg-gray-800 rounded-2xl shadow-lg">
+          <h3 className="text-2xl font-bold mb-4 text-blue-400">
+            Informações Pessoais
+          </h3>
+          <ul className="space-y-3 text-gray-300">
+            <li className="flex justify-between border-b border-gray-700 pb-2">
+              <span className="text-gray-400">Nome:</span>
+              <span className="font-medium">Yrmih Ian Gonçalves de Lima</span>
+            </li>
+            <li className="flex justify-between border-b border-gray-700 pb-2">
+              <span className="text-gray-400">Localização:</span>
+              <span className="font-medium">Ananindeua, Pará, Brasil</span>
+            </li>
+            <li className="flex justify-between border-b border-gray-700 pb-2">
+              <span className="text-gray-400">Especialidade:</span>
+              <span className="font-medium">
+                Desenvolvimento Client e Server Side
+              </span>
+            </li>
+            <li className="flex justify-between border-b border-gray-700 pb-2">
+              <span className="text-gray-400">Disponibilidade:</span>
+              <span className="font-medium">Freelance & Contrato</span>
+            </li>
+            <li className="flex justify-between border-b  border-gray-700 pb-2">
+              <span className="text-gray-400">Experiência:</span>
+              <span className="font-medium">2+ anos</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
