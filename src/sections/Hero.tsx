@@ -3,7 +3,7 @@
 import { ArrowDown, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import myPhoto from "@/public/img/me.png";
+
 
 export default function Hero() {
   return (
