@@ -1,5 +1,11 @@
-export default function Skills({ id }: {id: string}){
-   const skills = [
+import Image from "next/image";
+
+interface SkillsProps {
+  id: string;
+}
+
+export default function Skills({ id }: SkillsProps) {
+  const skills = [
     { name: "React", icon: "/icons/react.svg" },
     { name: "Next.js", icon: "/icons/nextjs.svg" },
     { name: "TypeScript", icon: "/icons/typescript.svg" },
@@ -18,14 +24,39 @@ export default function Skills({ id }: {id: string}){
     { name: "Figma", icon: "/icons/figma.svg" },
     { name: "Postman", icon: "/icons/postman.svg" },
   ];
-  return(
-    <section id={id} className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-800">
-      <h2 className="text-4xl font-bold mb-4">Skills</h2>
-      <ul className="flex flex-wrap justify-center gap-4 mt-4">
+  return (
+    <section
+      id={id}
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-[#0b0b22] to-[#050512]"
+    >
+      <h2 className="text-4xl font-bold text-indigo-400 mb-4 text-center">
+        Minhas Stacks
+      </h2>
+      <p className="text-gray-300 text-center max-w-2xl mb-12">
+        Ferramentas e tecnologias que utilizo para criar soluções modernas e
+        eficientes.
+      </p>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {skills.map((skill) => (
-          <li key={skill} className="px-4 py-2 bg-gray-700 rounded">{skill}</li>
+          <div
+            key={skill.name}
+            className="flex flex-col items-center gap-2 bg-[#11112b] hover:bg-[#1b1b3a] transition-all rounded-2xl p-6 shadow-md shadow-black/30 hover:scale-105 hover:shadow-indigo-500/20"
+          >
+            <div className="relative w-12 h-12">
+              <Image
+                src={skill.icon}
+                alt={skill.name}
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span className="text-gray-200 text-sm font-medium">
+              {skill.name}
+            </span>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
- );
+  );
 }
