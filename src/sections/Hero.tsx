@@ -4,7 +4,6 @@ import { ArrowDown, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-
 export default function Hero() {
   return (
     <section
@@ -69,11 +68,15 @@ export default function Hero() {
           className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl transition-shadow relative"
         >
           <Image
-            src="/img/me.png"
+            src="/img/eu.png"
             alt="Yrmih Ian"
             width={384}
             height={384}
-            className="object-cover w-full h-full"
+            className="w-full h-full"
+            style={{
+              objectFit: "cover",
+              objectPosition: "30% 30%", // 50% horizontal, 30% vertical
+            }}
           />
         </motion.div>
       </motion.div>
