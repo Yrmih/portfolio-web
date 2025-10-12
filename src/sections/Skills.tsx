@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface SkillsProps {
@@ -38,15 +40,21 @@ export default function Skills({ id }: SkillsProps) {
     hidden: { opacity: 0, scale: 0.8, y: 30 },
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
   };
-  
+
   return (
     <section
       id={id}
       className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-gradient-to-b from-[#0b0b22] to-[#050512]"
     >
-      <h2 className="text-4xl font-bold text-indigo-400 mb-4 text-center">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-4xl font-bold text-indigo-400 mb-4 text-center"
+      >
         Minhas Stacks
-      </h2>
+      </motion.h2>
       <p className="text-gray-300 text-center max-w-2xl mb-12">
         Ferramentas e tecnologias que utilizo para criar soluções modernas e
         eficientes.
