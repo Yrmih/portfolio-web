@@ -48,7 +48,7 @@ export default function Skills({ id }: SkillsProps) {
       id={id}
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-900 text-white"
     >
-      <h2 className="text-4xl font-bold mb-8">Skills</h2>
+      <h2 className="text-4xl font-bold mb-8 text-blue-500">Minhas Stacks</h2>
 
       <motion.div
         variants={container}
