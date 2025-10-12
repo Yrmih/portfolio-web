@@ -14,7 +14,6 @@ export default function About({ id }: { id: string }) {
       id={id}
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gradient-to-b from-gray-950 to-gray-900 text-gray-100"
     >
-      {/* Título */}
       <motion.h2
         variants={fadeUp}
         initial="hidden"
@@ -26,7 +25,6 @@ export default function About({ id }: { id: string }) {
         Sobre mim
       </motion.h2>
 
-      {/* Subtítulo */}
       <motion.p
         variants={fadeUp}
         initial="hidden"
@@ -35,9 +33,9 @@ export default function About({ id }: { id: string }) {
         viewport={{ once: false, amount: 0.2 }}
         className="max-w-3xl text-center text-gray-300 mb-12"
       >
-        Desenvolvedor Web com paixão por criar experiências digitais
-        interativas e eficientes. Combinando conhecimento técnico com visão
-        criativa para entregar projetos de alto impacto.
+        Desenvolvedor Web com paixão por criar experiências digitais interativas
+        e eficientes. Combinando conhecimento técnico com visão criativa para
+        entregar projetos de alto impacto.
       </motion.p>
 
       {/* Blocos principais */}
@@ -70,7 +68,6 @@ export default function About({ id }: { id: string }) {
         </div>
       </motion.div>
 
-      {/* Blocos de texto e informações pessoais */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
@@ -79,11 +76,8 @@ export default function About({ id }: { id: string }) {
         viewport={{ once: false, amount: 0.2 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl w-full"
       >
-        {/* Quem sou eu */}
         <div className="p-6 bg-gray-800 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-          <h3 className="text-2xl font-bold mb-4 text-blue-400">
-            Quem Sou Eu
-          </h3>
+          <h3 className="text-2xl font-bold mb-4 text-blue-400">Quem Sou Eu</h3>
           <p className="text-gray-300 leading-relaxed text-justify">
             Me chamo <strong>Yrmih Ian Gonçalves de Lima</strong>, tenho 30 anos
             e sou de <strong>Ananindeua - PA</strong>. Estudo{" "}
@@ -93,9 +87,9 @@ export default function About({ id }: { id: string }) {
             <br />
             Estagiei por 2 anos na{" "}
             <strong>Defensoria Pública do Estado do Pará</strong> como
-            desenvolvedor Front-end, onde desenvolvi e implementei WebApps, SPAs,
-            CSR (Client-Side Rendering) e SSR (Server-Side Rendering), utilizando
-            tecnologias como{" "}
+            desenvolvedor Front-end, onde desenvolvi e implementei WebApps,
+            SPAs, CSR (Client-Side Rendering) e SSR (Server-Side Rendering),
+            utilizando tecnologias como{" "}
             <strong>
               Next.js, TypeScript, TailwindCSS, ShadCN + Zod, React Hook Form
             </strong>{" "}
@@ -104,9 +98,8 @@ export default function About({ id }: { id: string }) {
             <br />
             Também atuo com frameworks server-side TypeScript/JavaScript como{" "}
             <strong>NestJS, TypeORM, Prisma, Express</strong> e APIs REST,
-            realizando integrações com bancos{" "}
-            <strong>PostgreSQL, MySQL</strong> e configurações com{" "}
-            <strong>Docker</strong>.
+            realizando integrações com bancos <strong>PostgreSQL, MySQL</strong>{" "}
+            e configurações com <strong>Docker</strong>.
             <br />
             <br />
             Atualmente, estou em aprendizado sobre aplicações em nuvem com{" "}
@@ -116,7 +109,6 @@ export default function About({ id }: { id: string }) {
           </p>
         </div>
 
-        {/* Informações pessoais */}
         <div className="p-6 bg-gray-800 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
           <h3 className="text-2xl font-bold mb-4 text-blue-400">
             Informações Pessoais
@@ -124,9 +116,7 @@ export default function About({ id }: { id: string }) {
           <ul className="space-y-3 text-gray-300">
             <li className="flex justify-between border-b border-gray-700 pb-2">
               <span className="text-gray-400">Nome:</span>
-              <span className="font-medium">
-                Yrmih Ian Gonçalves de Lima
-              </span>
+              <span className="font-medium">Yrmih Ian Gonçalves de Lima</span>
             </li>
             <li className="flex justify-between border-b border-gray-700 pb-2">
               <span className="text-gray-400">Localização:</span>
