@@ -10,7 +10,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
     >
-      {/* 🎥 Vídeo de fundo preenchendo toda a tela */}
+      
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <video
           autoPlay
@@ -21,13 +21,13 @@ export default function Hero() {
         >
           <source src="/video/panther.mp4" type="video/mp4" />
         </video>
-        {/* Camada escura leve para legibilidade */}
+        
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      {/* 🌟 Conteúdo principal sobre o vídeo */}
+      
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16">
-        {/* Texto e botões */}
+        
         <motion.div
           className="flex flex-col items-center md:items-start max-w-lg text-white"
           initial={{ opacity: 0, x: -50 }}
@@ -44,7 +44,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mb-16">
-            {/* Botão Conheça meu trabalho */}
+            
             <a
               href="#portfolio"
               className="relative px-6 py-3 rounded overflow-hidden group font-semibold text-white"
@@ -53,7 +53,7 @@ export default function Hero() {
               <span className="relative z-10">Conheça meu trabalho</span>
             </a>
 
-            {/* Botão Fale comigo */}
+            
             <a
               href="#contact"
               className="relative flex items-center gap-3 px-6 py-3 rounded overflow-hidden group font-semibold text-white"
@@ -75,7 +75,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Foto circular flutuante */}
+        
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, y: -20 }}
@@ -97,7 +97,7 @@ export default function Hero() {
               className="w-full h-full"
               style={{
                 objectFit: "cover",
-                objectPosition: "center 35%", // centraliza melhor a cabeça
+                objectPosition: "center 35%",
               }}
             />
           </motion.div>
