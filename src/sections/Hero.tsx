@@ -10,21 +10,22 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
     >
-      {/* 🎥 Vídeo de fundo */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/video/panther.mp4" type="video/mp4" />
-      </video>
+      {/* 🎥 Vídeo de fundo preenchendo toda a tela */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/video/panther.mp4" type="video/mp4" />
+        </video>
+        {/* Camada escura leve para legibilidade */}
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
 
-      {/* 🔳 Camada escura para legibilidade */}
-      <div className="absolute inset-0 bg-black/60" />
-
-      {/* 🌟 Conteúdo principal */}
+      {/* 🌟 Conteúdo principal sobre o vídeo */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16">
         {/* Texto e botões */}
         <motion.div
@@ -38,7 +39,7 @@ export default function Hero() {
             Yrmih Ian
           </h1>
           <p className="text-xl text-gray-300 mb-8">
-            Desenvolvedor Full Stack — construindo experiências digitais com
+            Desenvolvedor Full Stack — criando experiências digitais com
             criatividade e código limpo.
           </p>
 
@@ -59,7 +60,9 @@ export default function Hero() {
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
               <MessageCircle className="relative z-10 w-6 h-6 text-white" />
-              <span className="relative z-10 text-lg font-semibold">Fale comigo</span>
+              <span className="relative z-10 text-lg font-semibold">
+                Fale comigo
+              </span>
             </a>
           </div>
 
@@ -94,7 +97,7 @@ export default function Hero() {
               className="w-full h-full"
               style={{
                 objectFit: "cover",
-                objectPosition: "30% 30%", // centraliza a cabeça
+                objectPosition: "center 35%", // centraliza melhor a cabeça
               }}
             />
           </motion.div>
