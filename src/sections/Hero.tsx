@@ -8,21 +8,25 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black"
     >
       
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+      <div className="absolute inset-0 z-0">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="absolute top-0 left-0 w-full h-full object-cover scale-[1.2]"
+          style={{
+            transformOrigin: "center",
+            filter: "brightness(0.85)",
+          }}
         >
           <source src="/video/panther.mp4" type="video/mp4" />
         </video>
         
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       
