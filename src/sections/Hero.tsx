@@ -98,7 +98,7 @@ export default function Hero() {
               alt="Yrmih Ian"
               width={384}
               height={384}
-              className="w-full h-full"
+              className="w-full h-full object-cover"
               style={{
                 objectFit: "cover",
                 objectPosition: "center 35%",
