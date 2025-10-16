@@ -26,7 +26,10 @@ export default function Skills({ id }: SkillsProps) {
       name: "HTML5",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
     },
-    { name: "CSS3", icon: "/icons/css3.svg" },
+    {
+      name: "CSS3",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    },
     { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
     { name: "Angular", icon: "/icons/angular.svg" },
     { name: "Node.js", icon: "/icons/nodejs.svg" },
