@@ -89,17 +89,20 @@ export default function Skills({ id }: SkillsProps) {
         {skills.map((skill, index) => (
           <motion.div
             key={skill.name}
-            initial={{ opacity: 0, y: 30, scale: 0.8 }}
+            initial={{ opacity: 0, y: 30, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            whileHover={{ scale: 1.1 }}
-            transition={{
-              duration: 0.4,
-              delay: index * 0.05,
-              ease: "easeInOut",
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 0px 20px rgba(59,130,246,0.5)", // brilho azul suave
             }}
-            viewport={{ once: false, amount: 0.2 }}
-            className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium transform transition-transform duration-300 hover:scale-105 hover:bg-blue-600"
+            transition={{
+              duration: 0.2,
+              ease: "easeOut",
+            }}
+            className="relative px-6 py-3 bg-gray-800 rounded-2xl text-center font-medium 
+  transition-all duration-200 hover:bg-blue-600/30"
           >
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
             <img
               src={skill.icon}
               alt={skill.name}
