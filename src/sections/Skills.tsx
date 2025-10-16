@@ -39,7 +39,7 @@ export default function Skills({ id }: SkillsProps) {
     },
     {
       name: "Angular",
-      icon: "/https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
     },
     {
       name: "Node.js",
