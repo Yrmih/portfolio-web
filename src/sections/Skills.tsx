@@ -71,10 +71,11 @@ export default function Skills({ id }: SkillsProps) {
             className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium hover:bg-blue-600 hover:scale-105 transition-all duration-300"
           >
             <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-              alt="React"
-              width={50}
-              height={50}
+              src={skill.icon}
+              alt={skill.name}
+              width={40}
+              height={40}
+              className="mx-auto mb-2"
             />
             <span>{skill.name}</span>
           </motion.div>
