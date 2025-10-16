@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface SkillsProps {
   id: string;
@@ -9,14 +9,17 @@ interface SkillsProps {
 
 export default function Skills({ id }: SkillsProps) {
   const skills = [
-    { name: "React", icon: "/icons/react.svg" },
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    },
     { name: "Next.js", icon: "/icons/nextjs.svg" },
     { name: "TypeScript", icon: "/icons/typescript.svg" },
     { name: "JavaScript", icon: "/icons/javascript.svg" },
     { name: "HTML5", icon: "/icons/html5.svg" },
     { name: "CSS3", icon: "/icons/css3.svg" },
     { name: "TailwindCSS", icon: "/icons/tailwind.svg" },
-    { name: "Angular", icon: "/icons/angular.svg" }, 
+    { name: "Angular", icon: "/icons/angular.svg" },
     { name: "Node.js", icon: "/icons/nodejs.svg" },
     { name: "Express", icon: "/icons/express.svg" },
     { name: "NestJS", icon: "/icons/nestjs.svg" },
@@ -28,13 +31,16 @@ export default function Skills({ id }: SkillsProps) {
     { name: "Postman", icon: "/icons/postman.svg" },
   ];
 
- 
   const container = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { staggerChildren: 0.1, duration: 0.6, ease: [0.4, 0, 0.2, 1] },
+      transition: {
+        staggerChildren: 0.1,
+        duration: 0.6,
+        ease: [0.4, 0, 0.2, 1],
+      },
     },
   };
 
@@ -64,12 +70,11 @@ export default function Skills({ id }: SkillsProps) {
             variants={item}
             className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium hover:bg-blue-600 hover:scale-105 transition-all duration-300"
           >
-            <Image
-              src={skill.icon}
-              alt={skill.name}
-              width={40}
-              height={40}
-              className="mx-auto mb-2"
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+              alt="React"
+              width={50}
+              height={50}
             />
             <span>{skill.name}</span>
           </motion.div>
