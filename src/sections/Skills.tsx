@@ -41,9 +41,18 @@ export default function Skills({ id }: SkillsProps) {
       name: "Angular",
       icon: "/https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
     },
-    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
-    { name: "Express", icon: "/icons/express.svg" },
-    { name: "NestJS", icon: "/icons/nestjs.svg" },
+    {
+      name: "Node.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      name: "Express",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    },
+    {
+      name: "NestJS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
+    },
     { name: "Git", icon: "/icons/git.svg" },
     { name: "Vercel", icon: "/icons/vercel.svg" },
     { name: "Axios", icon: "/icons/axios.svg" },
