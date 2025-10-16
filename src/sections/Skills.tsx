@@ -61,7 +61,10 @@ export default function Skills({ id }: SkillsProps) {
       name: "Vercel",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
     },
-    { name: "Axios", icon: "/icons/axios.svg" },
+    {
+      name: "Axios",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+    },
     { name: "Swagger", icon: "/icons/swagger.svg" },
     { name: "Figma", icon: "/icons/figma.svg" },
     { name: "Postman", icon: "/icons/postman.svg" },
