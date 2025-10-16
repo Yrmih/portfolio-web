@@ -69,7 +69,10 @@ export default function Skills({ id }: SkillsProps) {
       name: "Swagger",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg",
     },
-    { name: "Figma", icon: "/icons/figma.svg" },
+    {
+      name: "Figma",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+    },
     { name: "Postman", icon: "/icons/postman.svg" },
   ];
 
