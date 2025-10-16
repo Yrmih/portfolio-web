@@ -53,7 +53,10 @@ export default function Skills({ id }: SkillsProps) {
       name: "NestJS",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
     },
-    { name: "Git", icon: "/icons/git.svg" },
+    {
+      name: "Git",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    },
     { name: "Vercel", icon: "/icons/vercel.svg" },
     { name: "Axios", icon: "/icons/axios.svg" },
     { name: "Swagger", icon: "/icons/swagger.svg" },
