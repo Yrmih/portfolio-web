@@ -103,19 +103,18 @@ export default function Skills({ id }: SkillsProps) {
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-900 text-white"
     >
       <h2 className="text-4xl font-bold mb-8 text-blue-500">Minhas Stacks</h2>
-
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        exit="hidden"
-        viewport={{ once: false, amount: 0.2 }}
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
-      >
-        {skills.map((skill) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        {skills.map((skill, index) => (
           <motion.div
             key={skill.name}
-            variants={item}
+            initial={{ opacity: 0, y: 40, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+              delay: index * 0.1,
+            }}
+            viewport={{ once: false, amount: 0.2 }}
             className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium hover:bg-blue-600 hover:scale-105 transition-all duration-300"
           >
             <img
@@ -128,7 +127,7 @@ export default function Skills({ id }: SkillsProps) {
             <span>{skill.name}</span>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
