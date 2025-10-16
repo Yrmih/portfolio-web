@@ -14,7 +14,6 @@ export default function Projects({ id }: { id: string }) {
       id={id}
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gradient-to-b from-gray-900 to-gray-950 text-gray-100"
     >
-      {/* título animado */}
       <motion.h2
         className="text-4xl font-bold mb-8 text-blue-500"
         initial={{ opacity: 0, y: -40 }}
@@ -25,7 +24,6 @@ export default function Projects({ id }: { id: string }) {
         Projetos
       </motion.h2>
 
-      {/* grid de projetos */}
       <motion.div
         className="grid md:grid-cols-3 gap-6 max-w-5xl"
         initial={{ opacity: 0, y: 60 }}
@@ -50,10 +48,8 @@ export default function Projects({ id }: { id: string }) {
             viewport={{ once: false }}
             transition={{ delay: index * 0.2, duration: 0.5 }}
           >
-            {/* camada de brilho diagonal suave */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
 
-            {/* conteúdo do card */}
             <h3 className="text-lg font-semibold text-blue-400 mb-2 relative z-10">
               {project.name}
             </h3>
