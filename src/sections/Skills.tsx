@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
-// import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface SkillsProps {
   id: string;
@@ -79,43 +78,27 @@ export default function Skills({ id }: SkillsProps) {
     },
   ];
 
-  const container = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.1,
-        duration: 0.6,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  const item: Variants = {
-    hidden: { opacity: 0, scale: 0.8, y: 30 },
-    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
   return (
     <section
       id={id}
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-900 text-white"
     >
       <h2 className="text-4xl font-bold mb-8 text-blue-500">Minhas Stacks</h2>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {skills.map((skill, index) => (
           <motion.div
             key={skill.name}
-            initial={{ opacity: 0, y: 40, scale: 0.9 }}
+            initial={{ opacity: 0, y: 30, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            whileHover={{ scale: 1.1 }}
             transition={{
-              duration: 0.5,
-              ease: "easeOut",
-              delay: index * 0.1,
+              duration: 0.4,
+              delay: index * 0.05,
+              ease: "easeInOut",
             }}
             viewport={{ once: false, amount: 0.2 }}
-            className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium hover:bg-blue-600 hover:scale-105 transition-all duration-300"
+            className="px-6 py-3 bg-gray-800 rounded-xl text-center font-medium transform transition-transform duration-300 hover:scale-105 hover:bg-blue-600"
           >
             <img
               src={skill.icon}
