@@ -46,25 +46,37 @@ export default function About({ id }: { id: string }) {
         viewport={{ once: false, amount: 0.2 }}
         className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mb-12 w-full"
       >
-        <div className="p-6 bg-gray-800 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-          <h3 className="text-lg font-semibold text-blue-400 mb-2">
-            Desenvolvimento Frontend
-          </h3>
-          <p className="text-gray-400">
-            Criação de interfaces modernas e responsivas, focando em experiência
-            do usuário, performance e acessibilidade.
-          </p>
-        </div>
-
-        <div className="p-6 bg-gray-800 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-          <h3 className="text-lg font-semibold text-blue-400 mb-2">
-            Desenvolvimento Backend
-          </h3>
-          <p className="text-gray-400">
-            Desenvolvimento de APIs robustas, integrações e lógica de servidor
-            com NestJS, TypeORM, Prisma e Express.
-          </p>
-        </div>
+        {[
+          {
+            title: "Desenvolvimento Frontend",
+            desc: "Criação de interfaces modernas e responsivas, focando em experiência do usuário, performance e acessibilidade.",
+          },
+          {
+            title: "Desenvolvimento Backend",
+            desc: "Desenvolvimento de APIs robustas, integrações e lógica de servidor com NestJS, TypeORM, Prisma e Express.",
+          },
+        ].map((card) => (
+          <motion.div
+            key={card.title}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 25px rgba(59,130,246,0.5)",
+            }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="relative p-6 bg-gray-800 rounded-2xl shadow-lg overflow-hidden
+                 transition-all duration-200"
+          >
+            {/* brilho diagonal dinâmico */}
+            <div
+              className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent 
+                      opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+            />
+            <h3 className="text-lg font-semibold text-blue-400 mb-2 relative z-10">
+              {card.title}
+            </h3>
+            <p className="text-gray-400 relative z-10">{card.desc}</p>
+          </motion.div>
+        ))}
       </motion.div>
 
       <motion.div
