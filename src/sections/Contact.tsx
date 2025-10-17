@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, } from "lucide-react";
 
 export default function Contact({ id }: { id: string }) {
   return (
@@ -43,10 +43,18 @@ export default function Contact({ id }: { id: string }) {
         transition={{ duration: 0.5 }}
       >
         <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-600 opacity-0 hover:opacity-20 blur-lg transition-opacity" />
-        
+
         <span className="text-lg font-semibold text-white">
           Fale comigo no WhatsApp
         </span>
+
+        <img
+          src="https://img.icons8.com/?size=100&id=964RahB4l606&format=png&color=25D366"
+          alt="WhatsApp"
+          width={32}
+          height={32}
+          className="drop-shadow-[0_0_#25D366]"
+        />
       </motion.a>
 
       <motion.div
