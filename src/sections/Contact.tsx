@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Contact({ id }: { id: string }) {
   return (
@@ -43,8 +43,7 @@ export default function Contact({ id }: { id: string }) {
         transition={{ duration: 0.5 }}
       >
         <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-green-400 to-emerald-600 opacity-0 hover:opacity-20 blur-lg transition-opacity" />
-
-        <MessageCircle className="w-6 h-6 text-white" />
+        
         <span className="text-lg font-semibold text-white">
           Fale comigo no WhatsApp
         </span>
