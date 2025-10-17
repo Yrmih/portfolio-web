@@ -50,10 +50,12 @@ export default function About({ id }: { id: string }) {
           {
             title: "Desenvolvimento Frontend",
             desc: "Criação de interfaces modernas e responsivas, focando em experiência do usuário, performance e acessibilidade.",
+            icon: "/img/web-development-svgrepo-com.svg",
           },
           {
             title: "Desenvolvimento Backend",
             desc: "Desenvolvimento de APIs robustas, integrações e lógica de servidor com NestJS, TypeORM, Prisma e Express.",
+            icon: "/img/development-svgrepo-com.svg",
           },
         ].map((card) => (
           <motion.div
@@ -66,10 +68,14 @@ export default function About({ id }: { id: string }) {
             className="relative p-6 bg-gray-800 rounded-2xl shadow-lg overflow-hidden
                  transition-all duration-200"
           >
-            {/* brilho diagonal dinâmico */}
             <div
               className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent 
                       opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+            />
+            <img
+              src={card.icon}
+              alt={card.title}
+              className="w-12 h-12 mb-4 relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
             <h3 className="text-lg font-semibold text-blue-400 mb-2 relative z-10">
               {card.title}
