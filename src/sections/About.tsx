@@ -66,7 +66,7 @@ export default function About({ id }: { id: string }) {
             }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="relative p-6 bg-gray-800 rounded-2xl shadow-lg overflow-hidden
-                 transition-all duration-200"
+             transition-all duration-200 flex flex-col items-center text-center"
           >
             <div
               className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent 
