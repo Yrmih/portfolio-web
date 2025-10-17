@@ -72,10 +72,22 @@ export default function About({ id }: { id: string }) {
               className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent 
                       opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl"
             />
-            <img
+            <motion.img
               src={card.icon}
               alt={card.title}
               className="w-12 h-12 mb-4 relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-300"
+              animate={{
+                y: [0, -6, 0],
+              }}
+              whileHover={{
+                rotate: [0, 8, -8, 0],
+                scale: 1.1,
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             />
             <h3 className="text-lg font-semibold text-blue-400 mb-2 relative z-10">
               {card.title}
