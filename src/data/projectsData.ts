@@ -21,10 +21,10 @@ export const projectsData: Project[] = [
     category: "Freelancer",
   },
   {
-    name: "Livre",
+    name: "Livre - Sistema interno Defensoria Pública do Pará",
     description:
       "Colaborei no desenvolvimento do sistema Livre, plataforma interna da Defensoria Pública do Estado do Pará, voltada ao gerenciamento de informações de pessoas privadas de liberdade, visitantes e defensores públicos. Atuei na criação de formulários dinâmicos, componentes reutilizáveis, DataTables interativas e na implementação de testes unitários com Vitest e React Testing Library.",
-    image: "/images/defensoria.jpg",
+    image: "/img/livre-painel.png",
     link: "#",
     techs: ["Next.js", "TypeScript", "ShadCN", "Tailwind"],
     stack: ["Frontend"],
@@ -39,5 +39,15 @@ export const projectsData: Project[] = [
     techs: ["Next.js", "Framer Motion", "Tailwind", "Material Ui"],
     stack: ["Frontend"],
     category: "Colaborativo",
+  },
+  {
+    name: "To-Do List Acadêmico",
+    description:
+      "Aplicação web voltada para gerenciamento de tarefas e estudos, permitindo que estudantes organizem suas atividades acadêmicas de forma eficiente. O sistema possibilita criar, editar e remover tarefas, definir prioridades e datas de entrega, e acompanhar o progresso diário. Desenvolvido com foco em interface intuitiva, responsividade e produtividade, facilitando o acompanhamento de disciplinas, trabalhos e projetos.",
+    image: "/img/to-do-list.png",
+    link: "#",
+    techs: ["React.js", "Framer Motion", "Tailwind",],
+    stack: ["Frontend"],
+    category: "Projeto Acadêmico",
   },
 ];
