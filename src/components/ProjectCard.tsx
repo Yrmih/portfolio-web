@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Project } from "@/types";
 
 interface ProjectCardProps {
@@ -10,10 +11,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <motion.a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       className="relative group overflow-hidden rounded-2xl shadow-lg bg-gray-800 transition-transform duration-300 hover:scale-[1.03]"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -21,13 +19,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ delay: index * 0.2, duration: 0.5 }}
     >
       <div className="h-56 overflow-hidden relative">
-        <img
-          src={project.image}
-          alt={project.name}
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-        />
+        <a href={project.image} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110 cursor-pointer"
+          />
+        </a>
 
-        {/* Mostra a categoria, se houver */}
         {project.category && (
           <div className="absolute top-3 right-3 bg-blue-600 text-xs px-3 py-1 rounded-full text-white">
             {project.category}
@@ -41,7 +41,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </h3>
         <p className="text-gray-400 text-sm mb-3">{project.description}</p>
 
-        {/* Mostra as techs com base em `stack`, se houver */}
         <div className="flex flex-wrap gap-2">
           {project.stack?.map((tech) => (
             <span
@@ -53,6 +52,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           ))}
         </div>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }

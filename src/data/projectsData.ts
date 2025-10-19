@@ -1,31 +1,43 @@
 import { Project } from "@/types";
 
+
 export const projectsData: Project[] = [
   {
-    name: "Kanban App",
-    description: "Aplicação fullstack com NestJS, Prisma e React.",
-    image: "/images/kanban.jpg",
+    name: "Kanban App - Sistema de Gestão de Tarefas",
+    description:
+      "Aplicação fullstack desenvolvida como projeto freelancer para a empresa Dr.Click, voltada ao gerenciamento de tarefas e fluxos internos. O sistema conta com autenticação de usuários, interface moderna com drag & drop e persistência de dados utilizando NestJS, TypeORM e PostgreSQL.",
+    image: "/img/kanban.png",
     link: "#",
-    techs: ["React", "NestJS", "Prisma", "PostgreSQL"],
+    techs: [
+      "React",
+      "TypeScript",
+      "Material UI",
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "Framer Motion",
+    ],
     stack: ["Fullstack"],
-    category: "Pessoal",
+    category: "Freelancer",
   },
   {
     name: "Livre",
-    description: "Sistema de registro e validação de eventos da Defensoria.",
+    description:
+      "Colaborei no desenvolvimento do sistema Livre, plataforma interna da Defensoria Pública do Estado do Pará, voltada ao gerenciamento de informações de pessoas privadas de liberdade, visitantes e defensores públicos. Atuei na criação de formulários dinâmicos, componentes reutilizáveis, DataTables interativas e na implementação de testes unitários com Vitest e React Testing Library.",
     image: "/images/defensoria.jpg",
     link: "#",
     techs: ["Next.js", "TypeScript", "ShadCN", "Tailwind"],
     stack: ["Frontend"],
-    category: "Profissional",
+    category: "Colaborativo",
   },
   {
-    name: "Portal Defensoria",
-    description: "Meu portfólio pessoal com animações e design minimalista.",
-    image: "/images/portfolio.jpg",
+    name: "Portal Web - Defensoria Pública do Pará",
+    description:
+      "Colaboração no desenvolvimento e manutenção do portal institucional da Defensoria Pública do Estado do Pará, atuando em ajustes visuais, componentes em React e melhorias de acessibilidade.",
+    image: "/img/portal-dpe.png",
     link: "#",
-    techs: ["Next.js", "Framer Motion", "Tailwind"],
+    techs: ["Next.js", "Framer Motion", "Tailwind", "Material Ui"],
     stack: ["Frontend"],
-    category: "Pessoal",
+    category: "Colaborativo",
   },
 ];
