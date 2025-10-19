@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/sections/Hero";
 import About from "@/sections/About";
 import Services from "@/sections/Services";
+import Howtohelp from "@/sections/Howtohelp";
 import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";
 import Contact from "@/sections/Contact";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <About id="about" />
         <Services id="services"/>
+        <Howtohelp id="howtohelp"/>
         <Skills id="skills" />
         <Projects id="projects" />
         <Contact id="contact" />
