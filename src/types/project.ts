@@ -4,5 +4,6 @@ export interface Project {
   image: string;
   link: string;
   stack?: string[];
+  techs?: string[]; 
   category?: string;
 }

@@ -1,4 +1,6 @@
-export const projectsData = [
+import { Project } from "@/types";
+
+export const projectsData: Project[] = [
   {
     name: "Kanban App",
     description: "Aplicação fullstack com NestJS, Prisma e React.",
@@ -9,7 +11,7 @@ export const projectsData = [
     category: "Pessoal",
   },
   {
-    name: "Sistema Defensoria",
+    name: "Livre",
     description: "Sistema de registro e validação de eventos da Defensoria.",
     image: "/images/defensoria.jpg",
     link: "#",
@@ -18,7 +20,7 @@ export const projectsData = [
     category: "Profissional",
   },
   {
-    name: "Portfolio",
+    name: "Portal Defensoria",
     description: "Meu portfólio pessoal com animações e design minimalista.",
     image: "/images/portfolio.jpg",
     link: "#",
