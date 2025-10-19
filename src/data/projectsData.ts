@@ -52,8 +52,8 @@ export const projectsData: Project[] = [
   {
     name: "Sistema de resumo de Reunioes",
     description:
-      "Aplicação web voltada para gerenciamento de tarefas e estudos, permitindo que estudantes organizem suas atividades acadêmicas de forma eficiente. O sistema possibilita criar, editar e remover tarefas, definir prioridades e datas de entrega, e acompanhar o progresso diário. Desenvolvido com foco em interface intuitiva, responsividade e produtividade, facilitando o acompanhamento de disciplinas, trabalhos e projetos.",
-    image: "/img/to-do-list.png",
+      "explicação...",
+    image: "/img/echo-meet.jpeg",
     link: "#",
     techs: ["React.js", "Framer Motion", "Tailwind"],
     stack: ["Frontend"],
