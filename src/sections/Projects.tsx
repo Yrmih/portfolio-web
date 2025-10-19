@@ -18,7 +18,7 @@ export default function Projects({ id }: { id: string }) {
         viewport={{ once: false, amount: 0.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        Projetos
+        Projetos Desenvolvidos e Contribuídos
       </motion.h2>
           <motion.div
         className="grid md:grid-cols-3 gap-8 max-w-6xl"
