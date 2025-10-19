@@ -50,7 +50,7 @@ export default function Hero() {
           <div className="flex flex-col md:flex-row gap-4 mb-16">
             
             <a
-              href="#portfolio"
+              href="#services"
               className="relative px-6 py-3 rounded overflow-hidden group font-semibold text-white"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
