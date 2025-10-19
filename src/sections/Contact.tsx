@@ -20,7 +20,7 @@ export default function Contact({ id }: { id: string }) {
       </motion.h2>
 
       <motion.p
-        className="text-lg text-gray-300 max-w-2xl text-center mb-8"
+        className="text-lg max-w-2xl text-center mb-8 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}

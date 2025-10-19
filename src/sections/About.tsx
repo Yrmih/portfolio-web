@@ -31,7 +31,7 @@ export default function About({ id }: { id: string }) {
         whileInView="visible"
         exit="hidden"
         viewport={{ once: false, amount: 0.2 }}
-        className="max-w-3xl text-center text-gray-300 mb-12"
+        className="max-w-3xl text-center mb-8 text-lg text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"
       >
         Desenvolvedor Web com paixão por criar experiências digitais interativas
         e eficientes. Combinando conhecimento técnico com visão criativa para

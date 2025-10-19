@@ -42,7 +42,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl font-bold mb-4 text-blue-400">
             Yrmih Ian
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="mb-8 text-lg text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
             Desenvolvedor Full Stack — criando experiências digitais com
             criatividade e código limpo.
           </p>
