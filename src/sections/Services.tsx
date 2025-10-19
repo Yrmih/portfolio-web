@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 const services = [
- {
+  {
     icon: <Layout className="w-6 h-6 text-blue-400" />,
     title: "Desenvolvimento de Interfaces",
     desc: "Criação de interfaces modernas, responsivas e acessíveis.",
@@ -31,7 +31,6 @@ const services = [
     desc: "Desenvolvimento modular e otimizado com React e ShadCN.",
   },
 
-  // BACKEND
   {
     icon: <Server className="w-6 h-6 text-green-400" />,
     title: "APIs Escaláveis",
@@ -66,7 +65,7 @@ const services = [
 
 export default function Services({ id }: { id: string }) {
   return (
-    <section id={id} className="py-20 bg=[#0a0a0f] text-gray-200">
+    <section id={id} className="py-20 bg=[#0a0a0f] text-blue-500">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
