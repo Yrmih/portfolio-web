@@ -3,6 +3,6 @@ export interface Project {
   description: string;
   image: string;
   link: string;
-  stack: string[];
-  category: string;
+  stack?: string[];
+  category?: string;
 }
