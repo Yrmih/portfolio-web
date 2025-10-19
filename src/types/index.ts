@@ -1,8 +1,1 @@
-export interface Project {
-  name: string;
-  description: string;
-  image: string;
-  link: string;
-  stack: string[];
-  category: string;
-}
+export * from "./project"
