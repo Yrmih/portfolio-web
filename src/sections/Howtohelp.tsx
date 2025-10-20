@@ -7,7 +7,7 @@ export default function HelpSection({id}: {id: string}) {
   return (
     <section
       id={id}
-      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gradient-to-b from-gray-900 to-gray-950 text-gray-100"
+      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100"
     >
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         

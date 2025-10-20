@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-
 import {
   Layout,
   Smartphone,
@@ -30,7 +29,6 @@ const services = [
     title: "Componentes Reutilizáveis",
     desc: "Desenvolvimento modular e otimizado com React e ShadCN.",
   },
-
   {
     icon: <Server className="w-6 h-6 text-green-400" />,
     title: "APIs Escaláveis",
@@ -39,7 +37,7 @@ const services = [
   {
     icon: <Database className="w-6 h-6 text-yellow-400" />,
     title: "Banco de Dados",
-    desc: "Integração com PostgreSQL, Prisma, TypeORM.",
+    desc: "Integração com PostgreSQL, Prisma e TypeORM.",
   },
   {
     icon: <Cloud className="w-6 h-6 text-cyan-400" />,
@@ -65,32 +63,61 @@ const services = [
 
 export default function Services({ id }: { id: string }) {
   return (
-    <section id={id} className="py-20 bg=[#0a0a0f] text-blue-500">
-      <div className="max-w-6xl mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold mb-6 text-center text-blue-500"
-        >
-          Meus Serviços
-        </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, i) => (
+    <section
+      id={id}
+      className="min-h-screen flex flex-col justify-center items-center py-20 px-8 bg-gray-950 text-gray-100"
+    >
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-4xl font-bold mb-12 text-center text-blue-400"
+      >
+        Meus Serviços
+      </motion.h2>
+
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+        {services.map((service, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.05 }}
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.07,
+              boxShadow: "0px 0px 25px 5px rgba(0,150,255,0.4)",
+            }}
+            className="relative bg-[#11121a] p-8 rounded-2xl overflow-hidden border border-blue-500/10 transition-all duration-300 group"
+          >
+            {/* Efeito elétrico atrás do card */}
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-              viewport={{ once: true }}
-              className="bg-[#11121a] p-6 rounded-2xl shadow-lg hover:shadow-blue-500/10 transition-all border border-white/5"
-            >
-              <div className="flex items-center mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-400 text-sm">{service.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+              className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              animate={{
+                background: [
+                  "radial-gradient(circle at 20% 20%, rgba(0,150,255,0.15) 0%, transparent 80%)",
+                  "radial-gradient(circle at 80% 80%, rgba(0,150,255,0.2) 0%, transparent 80%)",
+                  "radial-gradient(circle at 50% 50%, rgba(0,150,255,0.3) 0%, transparent 90%)",
+                ],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+              }}
+            />
+
+            <div className="relative z-10 flex items-center mb-4">
+              {service.icon}
+            </div>
+            <h3 className="relative z-10 text-xl font-semibold mb-2 text-blue-400">
+              {service.title}
+            </h3>
+            <p className="relative z-10 text-gray-400 text-sm">
+              {service.desc}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

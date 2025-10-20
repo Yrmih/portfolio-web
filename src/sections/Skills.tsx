@@ -31,8 +31,7 @@ export default function Skills({ id }: SkillsProps) {
   return (
     <section
       id={id}
-      className="min-h-screen flex flex-col justify-center items-center p-8 
-      bg-gradient-to-b from-gray-900 to-gray-950 text-white"
+      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100"
     >
       <h2 className="text-4xl font-bold mb-8 text-blue-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]">
         Minhas Stacks
