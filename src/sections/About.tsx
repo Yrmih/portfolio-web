@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image"; // Certifique-se de importar o Image
 
 export default function About({ id }: { id: string }) {
   const fadeUp = {
@@ -145,23 +146,36 @@ export default function About({ id }: { id: string }) {
           {
             title: "Informações Pessoais",
             content: (
-              <ul className="space-y-3 text-gray-300 relative z-10">
-                {[
-                  ["Nome:", "Yrmih Ian Gonçalves de Lima"],
-                  ["Localização:", "Ananindeua, Pará, Brasil"],
-                  ["Especialidade:", "Desenvolvimento Client e Server Side"],
-                  ["Disponibilidade:", "Freelance & Contrato"],
-                  ["Experiência:", "2+ anos"],
-                ].map(([label, value]) => (
-                  <li
-                    key={label}
-                    className="flex justify-between border-b border-gray-700 pb-2"
-                  >
-                    <span className="text-gray-400">{label}</span>
-                    <span className="font-medium">{value}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="relative flex flex-col justify-center items-center space-y-4">
+                <ul className="space-y-3 text-gray-300 relative z-10">
+                  {[
+                    ["Nome:", "Yrmih Ian Gonçalves de Lima"],
+                    ["Localização:", "Ananindeua, Pará, Brasil"],
+                    ["Especialidade:", "Desenvolvimento Client e Server Side"],
+                    ["Disponibilidade:", "Freelance & Contrato"],
+                    ["Experiência:", "2+ anos"],
+                  ].map(([label, value]) => (
+                    <li
+                      key={label}
+                      className="flex justify-between border-b border-gray-700 pb-2"
+                    >
+                      <span className="text-gray-400">{label}</span>
+                      <span className="font-medium">{value}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Imagem do slogan com maior tamanho, centralizada */}
+                <div className="w-full flex justify-center items-center mt-4">
+                  <Image
+                    src="/img/slogan-tiger.png"
+                    alt="Logo do Tigre"
+                    width={300}   
+                    height={300}
+                    className="opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_12px_rgba(59,130,246,0.5)]"
+                  />
+                </div>
+              </div>
             ),
           },
         ].map((card) => (
@@ -174,7 +188,6 @@ export default function About({ id }: { id: string }) {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="relative p-6 bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-200"
           >
-            {/* reflexo diagonal sutil */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             <h3 className="text-2xl font-bold mb-4 text-blue-400 relative z-10">
               {card.title}
