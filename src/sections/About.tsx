@@ -12,7 +12,7 @@ export default function About({ id }: { id: string }) {
   return (
     <section
       id={id}
-      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gradient-to-b from-gray-950 to-gray-900 text-gray-100"
+      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100"
     >
       <motion.h2
         variants={fadeUp}

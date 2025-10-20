@@ -10,7 +10,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black"
     >
-      
+      {/* 🎥 Background de vídeo */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -25,13 +25,12 @@ export default function Hero() {
         >
           <source src="/video/panther.mp4" type="video/mp4" />
         </video>
-        
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      
+      {/* ✨ Conteúdo principal */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16">
-        
+        {/* Texto principal */}
         <motion.div
           className="flex flex-col items-center md:items-start max-w-lg text-white"
           initial={{ opacity: 0, x: -50 }}
@@ -39,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-lg text-gray-300 mb-2">Olá, eu sou</p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-blue-400">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-blue-400 drop-shadow-[0_0_15px_rgba(0,150,255,0.6)]">
             Yrmih Ian
           </h1>
           <p className="mb-8 text-lg text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
@@ -47,29 +46,78 @@ export default function Hero() {
             criatividade e código limpo.
           </p>
 
+          {/* 🔹 Botões */}
           <div className="flex flex-col md:flex-row gap-4 mb-16">
-            
-            <a
+            {/* Conheça meu trabalho */}
+            <motion.a
               href="#services"
-              className="relative px-6 py-3 rounded overflow-hidden group font-semibold text-white"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(59,130,246,0.7)",
+              }}
+              className="relative px-8 py-3 rounded-xl overflow-hidden group font-semibold text-white border border-blue-500/30 transition-all duration-300"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
+              <span className="relative z-10">Conheça meu trabalho</span>
+              {/* Efeito de brilho no fundo */}
+              <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[radial-gradient(circle_at_center,rgba(0,150,255,0.3)_0%,transparent_80%)]"></span>
+            </motion.a>
+
+            {/* Fale comigo */}
+            <motion.a
+              href="#contact"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(0,180,255,0.7)",
+              }}
+              className="relative flex items-center gap-3 px-8 py-3 rounded-xl overflow-hidden group font-semibold text-white border border-blue-500/30 transition-all duration-300"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
-              <span className="relative z-10">Conheça meu trabalho</span>
-            </a>
 
-            
-            <a
-              href="#contact"
-              className="relative flex items-center gap-3 px-6 py-3 rounded overflow-hidden group font-semibold text-white"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
-              <MessageCircle className="relative z-10 w-6 h-6 text-white" />
+              {/* Ícone melhorado com pulso elétrico */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                  filter: [
+                    "drop-shadow(0 0 5px rgba(0,200,255,0.7))",
+                    "drop-shadow(0 0 15px rgba(0,200,255,1))",
+                    "drop-shadow(0 0 5px rgba(0,200,255,0.7))",
+                  ],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  ease: "easeInOut",
+                }}
+                className="relative z-10"
+              >
+                <MessageCircle className="w-6 h-6 text-white" />
+              </motion.div>
+
               <span className="relative z-10 text-lg font-semibold">
                 Fale comigo
               </span>
-            </a>
+
+              {/* Efeito elétrico de fundo */}
+              <motion.div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-300"
+                animate={{
+                  background: [
+                    "radial-gradient(circle at 20% 20%, rgba(0,150,255,0.2) 0%, transparent 80%)",
+                    "radial-gradient(circle at 80% 80%, rgba(0,200,255,0.25) 0%, transparent 80%)",
+                    "radial-gradient(circle at 50% 50%, rgba(0,150,255,0.3) 0%, transparent 90%)",
+                  ],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
+              />
+            </motion.a>
           </div>
 
+          {/* Scroll indicator */}
           <a
             href="#about"
             className="flex flex-col items-center text-gray-300 hover:text-white transition"
@@ -79,7 +127,7 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        
+        {/* Foto com brilho animado */}
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, y: -20 }}
