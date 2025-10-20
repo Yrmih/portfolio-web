@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image"; // Certifique-se de importar o Image
+import Image from "next/image";
 
 export default function About({ id }: { id: string }) {
   const fadeUp = {
@@ -165,13 +165,12 @@ export default function About({ id }: { id: string }) {
                   ))}
                 </ul>
 
-                {/* Imagem do slogan com maior tamanho, centralizada */}
-                <div className="w-full flex justify-center items-center mt-4">
+                <div className="w-full flex justify-center items-center mt-6">
                   <Image
                     src="/img/slogan-tiger.png"
                     alt="Logo do Tigre"
-                    width={300}   
-                    height={300}
+                    width={500}
+                    height={500}
                     className="opacity-90 hover:opacity-100 transition-opacity duration-300 drop-shadow-[0_0_12px_rgba(59,130,246,0.5)]"
                   />
                 </div>
