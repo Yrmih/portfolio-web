@@ -52,7 +52,7 @@ export const projectsData: Project[] = [
   {
     name: "Sistema de resumo de Reunioes",
     description:
-      "explicação...",
+      "Este sistema foi desenvolvido para facilitar o agendamento e o gerenciamento de reuniões em ambientes corporativos e acadêmicos. Ele permite a criação, organização e controle de reuniões com funcionalidades como gestão de participantes, notificações em tempo real e segurança no acesso. A interface foi construída com React e Mantine UI, proporcionando uma experiência fluida e responsiva, tanto em desktop quanto em dispositivos móveis. O backend foi desenvolvido em Python, integrado aos serviços da Google Cloud e utilizando IA da Google para recursos como transcrição automática de reuniões. Com autenticação segura e controle de acesso personalizado, o sistema oferece flexibilidade para diferentes tipos de usuários, garantindo praticidade, segurança e escalabilidade.",
     image: "/img/echo-meet.jpeg",
     link: "#",
     techs: ["React.js", "Framer Motion", "Tailwind"],
