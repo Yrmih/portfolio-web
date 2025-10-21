@@ -10,7 +10,6 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black"
     >
-      {/* 🎥 Background de vídeo */}
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -20,7 +19,7 @@ export default function Hero() {
           className="absolute top-0 left-0 w-full h-full object-cover scale-[1.2]"
           style={{
             transformOrigin: "center",
-            filter: "brightness(0.85)",
+            filter: "brightness(1.6)",
           }}
         >
           <source src="/video/panther.mp4" type="video/mp4" />
@@ -28,9 +27,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      {/* ✨ Conteúdo principal */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16">
-        {/* Texto principal */}
         <motion.div
           className="flex flex-col items-center md:items-start max-w-lg text-white"
           initial={{ opacity: 0, x: -50 }}
@@ -46,9 +43,7 @@ export default function Hero() {
             criatividade e código limpo.
           </p>
 
-          {/* 🔹 Botões */}
           <div className="flex flex-col md:flex-row gap-4">
-            {/* Conheça meu trabalho */}
             <motion.a
               href="#services"
               whileHover={{
@@ -62,7 +57,6 @@ export default function Hero() {
               <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[radial-gradient(circle_at_center,rgba(0,150,255,0.3)_0%,transparent_80%)]"></span>
             </motion.a>
 
-            {/* Fale comigo */}
             <motion.a
               href="#contact"
               whileHover={{
