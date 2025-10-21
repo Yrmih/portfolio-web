@@ -5,7 +5,9 @@ export const metadata: Metadata = {
   title: "Portfólio",
   description: "Portfólio pessoal de Ian Gonçalves",
   icons: {
-  icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon/icons8-tigre-64.png", sizes: "64x64", type: "image/png" },
+    ],
   },
 };
 
