@@ -47,7 +47,7 @@ export default function Hero() {
           </p>
 
           {/* 🔹 Botões */}
-          <div className="flex flex-col md:flex-row gap-4 mb-16">
+          <div className="flex flex-col md:flex-row gap-4">
             {/* Conheça meu trabalho */}
             <motion.a
               href="#services"
@@ -59,7 +59,6 @@ export default function Hero() {
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
               <span className="relative z-10">Conheça meu trabalho</span>
-              {/* Efeito de brilho no fundo */}
               <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[radial-gradient(circle_at_center,rgba(0,150,255,0.3)_0%,transparent_80%)]"></span>
             </motion.a>
 
@@ -73,8 +72,6 @@ export default function Hero() {
               className="relative flex items-center gap-3 px-8 py-3 rounded-xl overflow-hidden group font-semibold text-white border border-blue-500/30 transition-all duration-300"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 opacity-70 group-hover:opacity-100 transition-opacity blur-sm"></span>
-
-              {/* Ícone melhorado com pulso elétrico */}
               <motion.div
                 animate={{
                   scale: [1, 1.2, 1],
@@ -98,7 +95,6 @@ export default function Hero() {
                 Fale comigo
               </span>
 
-              {/* Efeito elétrico de fundo */}
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 rounded-xl transition-all duration-300"
                 animate={{
@@ -116,52 +112,9 @@ export default function Hero() {
               />
             </motion.a>
           </div>
-
-          <motion.a
-            href="#about"
-            whileHover={{
-              scale: 1.1,
-              textShadow: "0px 0px 12px rgba(0,200, 255, 0.8)",
-            }}
-            transition={{ duration: 0.3 }}
-            className="absolute bottom-10 flex flex-col items-center text-blue-400 hover:text-blue-300 font-medium tracking-wide cursor-pointer group"
-          >
-            <span className="relative z-10 mb-2 text-lg group-hover:animate-pulse">
-              Ver mais
-            </span>
-            <motion.div
-              animate={{
-                y: [0, 8, 0],
-                filter: [
-                  "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
-                  "drop-shadow(0 0 15px rgba(0,200,255,1))",
-                  "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
-                ],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 2,
-                ease: "easeInOut",
-              }}
-            >
-              <ArrowDown size={28} className="group-hover:text-blue-300" />
-            </motion.div>
-            <motion.span
-              className="absolute w-20 h-20 rounded-full bg-blue-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-              animate={{
-                scale: [1, 1.5, 1],
-                opacity: [0.2, 0.4, 0.2],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.a>
         </motion.div>
 
-        {/* Foto com brilho animado */}
+        {/* Foto */}
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, y: -20 }}
@@ -189,6 +142,51 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
+      <motion.a
+        href="#about"
+        whileHover={{
+          scale: 1.1,
+          textShadow: "0px 0px 14px rgba(0,200,255,0.8)",
+        }}
+        transition={{ duration: 0.3 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-blue-400 hover:text-blue-300 font-medium tracking-wide cursor-pointer group z-20"
+      >
+        <span className="relative z-10 mb-2 text-lg group-hover:animate-pulse">
+          Ver mais
+        </span>
+
+        <motion.div
+          animate={{
+            y: [0, 10, 0],
+            filter: [
+              "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
+              "drop-shadow(0 0 15px rgba(0,200,255,1))",
+              "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
+            ],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 2,
+            ease: "easeInOut",
+          }}
+        >
+          <ArrowDown size={30} className="group-hover:text-blue-300" />
+        </motion.div>
+
+        <motion.span
+          className="absolute w-28 h-28 rounded-full bg-blue-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+          animate={{
+            scale: [1, 1.8, 1],
+            opacity: [0.15, 0.4, 0.15],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 3,
+            ease: "easeInOut",
+          }}
+        />
+      </motion.a>
     </section>
   );
 }

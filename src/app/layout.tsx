@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 export const metadata: Metadata = {
-  title: "Ian Gonçalves | Portfólio",
+  title: "Portfólio",
   description: "Portfólio pessoal de Ian Gonçalves",
+  icons: {
+  icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -14,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className="bg-gray-900 text-white"
-      >
-        {children}
-      </body>
+      <body className="bg-gray-900 text-white">{children}</body>
     </html>
   );
 }
