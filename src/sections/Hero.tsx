@@ -117,14 +117,48 @@ export default function Hero() {
             </motion.a>
           </div>
 
-          {/* Scroll indicator */}
-          <a
+          <motion.a
             href="#about"
-            className="flex flex-col items-center text-gray-300 hover:text-white transition"
+            whileHover={{
+              scale: 1.1,
+              textShadow: "0px 0px 12px rgba(0,200, 255, 0.8)",
+            }}
+            transition={{ duration: 0.3 }}
+            className="absolute bottom-10 flex flex-col items-center text-blue-400 hover:text-blue-300 font-medium tracking-wide cursor-pointer group"
           >
-            Ver mais
-            <ArrowDown className="animate-bounce mt-2" size={24} />
-          </a>
+            <span className="relative z-10 mb-2 text-lg group-hover:animate-pulse">
+              Ver mais
+            </span>
+            <motion.div
+              animate={{
+                y: [0, 8, 0],
+                filter: [
+                  "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
+                  "drop-shadow(0 0 15px rgba(0,200,255,1))",
+                  "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
+                ],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+                ease: "easeInOut",
+              }}
+            >
+              <ArrowDown size={28} className="group-hover:text-blue-300" />
+            </motion.div>
+            <motion.span
+              className="absolute w-20 h-20 rounded-full bg-blue-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              animate={{
+                scale: [1, 1.5, 1],
+                opacity: [0.2, 0.4, 0.2],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 3,
+                ease: "easeInOut",
+              }}
+            />
+          </motion.a>
         </motion.div>
 
         {/* Foto com brilho animado */}
