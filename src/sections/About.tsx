@@ -39,7 +39,6 @@ export default function About({ id }: { id: string }) {
         entregar projetos de alto impacto.
       </motion.p>
 
-      {/* Seção "Quem Sou Eu" e "Informações Pessoais" */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
