@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import AtomsAnimation from "@/components/AtomsAnimation";
 
 interface SkillsProps {
   id: string;
@@ -31,13 +32,17 @@ export default function Skills({ id }: SkillsProps) {
   return (
     <section
       id={id}
-      className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100"
+      className="relative min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100 overflow-hidden"
     >
-      <h2 className="text-4xl font-bold mb-8 text-blue-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]">
+      {/* 🎇 Átomos azuis e amarelos */}
+     <AtomsAnimation/>
+      <AtomsAnimation/>
+
+      <h2 className="text-4xl font-bold mb-8 text-blue-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.6)] z-10">
         Minhas Stacks
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 z-10">
         {skills.map((skill) => (
           <motion.div
             key={skill.name}
