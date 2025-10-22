@@ -13,6 +13,7 @@ import {
   Code,
   ArrowDown,
 } from "lucide-react";
+import AtomsAnimation from "@/components/AtomsAnimation";
 
 const services = [
   {
@@ -68,6 +69,8 @@ export default function Services({ id }: { id: string }) {
       id={id}
       className="relative min-h-screen flex flex-col justify-center items-center py-20 px-8 bg-gray-950 text-gray-100"
     >
+      <AtomsAnimation />
+
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +92,7 @@ export default function Services({ id }: { id: string }) {
               scale: 1.07,
               boxShadow: "0px 0px 25px 5px rgba(0,150,255,0.4)",
             }}
-            className="relative bg-[#11121a] p-8 rounded-2xl overflow-hidden border border-blue-500/10 transition-all duration-300 group"
+            className="relative bg-[#11121a] p-8 rounded-2xl overflow-hidden border border-blue-500/10 transition-all duration-300 group z-10"
           >
             {/* Efeito elétrico atrás do card */}
             <motion.div
@@ -120,7 +123,7 @@ export default function Services({ id }: { id: string }) {
           </motion.div>
         ))}
       </div>
-      
+
       <motion.a
         href="#howtohelp"
         whileHover={{
