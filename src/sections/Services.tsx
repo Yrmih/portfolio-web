@@ -15,6 +15,19 @@ import {
 } from "lucide-react";
 import AtomsAnimation from "@/components/AtomsAnimation";
 
+const topServices = [
+  {
+    icon: "/img/web-development-svgrepo-com.svg",
+    title: "Desenvolvimento Frontend",
+    desc: "Criação de interfaces modernas e responsivas, focando em experiência do usuário, performance e acessibilidade.",
+  },
+  {
+    icon: "/img/development-svgrepo-com.svg",
+    title: "Desenvolvimento Backend",
+    desc: "Desenvolvimento de APIs robustas, integrações e lógica de servidor com NestJS, TypeORM, Prisma e Express.",
+  },
+];
+
 const services = [
   {
     icon: <Layout className="w-6 h-6 text-blue-400" />,
@@ -80,6 +93,49 @@ export default function Services({ id }: { id: string }) {
         Meus Serviços
       </motion.h2>
 
+      {/* Top cards lado a lado, iguais ao About */}
+      <div className="flex flex-col md:flex-row gap-6 max-w-4xl w-full mb-12">
+        {topServices.map((card, i) => (
+          <motion.div
+            key={card.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 25px rgba(59,130,246,0.5)",
+            }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="relative p-6 bg-gray-800 rounded-2xl shadow-lg overflow-hidden
+             transition-all duration-200 flex-1 flex flex-col items-center text-center"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+            <motion.img
+              src={card.icon}
+              alt={card.title}
+              className="w-12 h-12 mb-4 relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-300"
+              animate={{
+                y: [0, -6, 0],
+              }}
+              whileHover={{
+                rotate: [0, 8, -8, 0],
+                scale: 1.1,
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <h3 className="text-lg font-semibold text-blue-400 mb-2 relative z-10">
+              {card.title}
+            </h3>
+            <p className="text-gray-400 relative z-10">{card.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Grid dos outros serviços */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
         {services.map((service, i) => (
           <motion.div
@@ -117,13 +173,12 @@ export default function Services({ id }: { id: string }) {
             <h3 className="relative z-10 text-xl font-semibold mb-2 text-blue-400">
               {service.title}
             </h3>
-            <p className="relative z-10 text-gray-400 text-sm">
-              {service.desc}
-            </p>
+            <p className="relative z-10 text-gray-400 text-sm">{service.desc}</p>
           </motion.div>
         ))}
       </div>
 
+      {/* Botão "Ver mais" */}
       <motion.a
         href="#howtohelp"
         whileHover={{
