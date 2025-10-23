@@ -16,7 +16,7 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover scale-[1.2]"
+          className="absolute top-0 left-0 w-full h-full object-cover scale-[1.2] hidden md:block"
           style={{
             transformOrigin: "center",
             filter: "brightness(1.6)",
@@ -29,8 +29,12 @@ export default function Hero() {
           loop
           muted
           playsInline
-          className=""
-          style={{}}
+          className="absolute top-0 left-0w-full h-full object-cover scale-[1.2] md:hidden"
+          style={{
+            transformOrigin: "center",
+            filter: "brightness(1.6)",
+            objectPosition: "center",
+          }}
         >
           <source
             src="/video/Mystical_Panther_Emerges_From_Darkness.mp4"
