@@ -12,12 +12,9 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black"
     >
-      
       <HeroVideo />
 
-      
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16">
-        
         <motion.div
           className="flex flex-col items-center md:items-start max-w-lg text-white"
           initial={{ opacity: 0, x: -50 }}
@@ -34,7 +31,6 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4">
-            
             <motion.a
               href="#services"
               whileHover={{
@@ -48,7 +44,6 @@ export default function Hero() {
               <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[radial-gradient(circle_at_center,rgba(0,150,255,0.3)_0%,transparent_80%)]"></span>
             </motion.a>
 
-            {/* Botão Fale comigo */}
             <motion.a
               href="#contact"
               whileHover={{
@@ -130,7 +125,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* 👇 Indicador de scroll modular */}
       <ScrollIndicator target="#about" label="Ver mais" />
     </section>
   );

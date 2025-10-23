@@ -11,9 +11,9 @@ import {
   Wrench,
   Cpu,
   Code,
-  ArrowDown,
 } from "lucide-react";
 import AtomsAnimation from "@/components/AtomsAnimation";
+import ScrollIndicator from "@/components/ScrollIndicator"; 
 
 const topServices = [
   {
@@ -93,9 +93,9 @@ export default function Services({ id }: { id: string }) {
         Meus Serviços
       </motion.h2>
 
-      {/* Top cards lado a lado, iguais ao About */}
+      {/* Top cards lado a lado */}
       <div className="flex flex-col md:flex-row gap-6 max-w-4xl w-full mb-12">
-        {topServices.map((card, i) => (
+        {topServices.map((card) => (
           <motion.div
             key={card.title}
             initial={{ opacity: 0, y: 30 }}
@@ -114,13 +114,8 @@ export default function Services({ id }: { id: string }) {
               src={card.icon}
               alt={card.title}
               className="w-12 h-12 mb-4 relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-300"
-              animate={{
-                y: [0, -6, 0],
-              }}
-              whileHover={{
-                rotate: [0, 8, -8, 0],
-                scale: 1.1,
-              }}
+              animate={{ y: [0, -6, 0] }}
+              whileHover={{ rotate: [0, 8, -8, 0], scale: 1.1 }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
@@ -150,7 +145,7 @@ export default function Services({ id }: { id: string }) {
             }}
             className="relative bg-[#11121a] p-8 rounded-2xl overflow-hidden border border-blue-500/10 transition-all duration-300 group z-10"
           >
-            {/* Efeito elétrico atrás do card */}
+            {/* Efeito elétrico */}
             <motion.div
               className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               animate={{
@@ -178,51 +173,7 @@ export default function Services({ id }: { id: string }) {
         ))}
       </div>
 
-      {/* Botão "Ver mais" */}
-      <motion.a
-        href="#howtohelp"
-        whileHover={{
-          scale: 1.1,
-          textShadow: "0px 0px 14px rgba(0,200,255,0.8)",
-        }}
-        transition={{ duration: 0.3 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-blue-400 hover:text-blue-300 font-medium tracking-wide cursor-pointer group z-20"
-      >
-        <span className="relative z-10 mb-2 text-lg group-hover:animate-pulse">
-          Ver mais
-        </span>
-
-        <motion.div
-          animate={{
-            y: [0, 10, 0],
-            filter: [
-              "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
-              "drop-shadow(0 0 15px rgba(0,200,255,1))",
-              "drop-shadow(0 0 6px rgba(0,200,255,0.5))",
-            ],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 2,
-            ease: "easeInOut",
-          }}
-        >
-          <ArrowDown size={30} className="group-hover:text-blue-300" />
-        </motion.div>
-
-        <motion.span
-          className="absolute w-28 h-28 rounded-full bg-blue-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-          animate={{
-            scale: [1, 1.8, 1],
-            opacity: [0.15, 0.4, 0.15],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 3,
-            ease: "easeInOut",
-          }}
-        />
-      </motion.a>
+      <ScrollIndicator target="#howtohelp" label="Ver mais" />
     </section>
   );
 }
