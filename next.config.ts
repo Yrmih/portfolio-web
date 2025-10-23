@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       "cdn-icons-png.flaticon.com",
       "sentry-brand.storage.googleapis.com",
       "raw.githubusercontent.com",
+      "img.icons8.com",
     ],
   },
 };

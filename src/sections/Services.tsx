@@ -7,8 +7,10 @@ import { topServices, services } from "@/data/servicesData";
 
 export default function Services({ id }: { id: string }) {
   return (
-    <section id={id} className="relative min-h-screen flex flex-col justify-center items-center py-20 px-8 bg-gray-950 text-gray-100">
-      
+    <section
+      id={id}
+      className="relative min-h-screen flex flex-col justify-center items-center py-20 px-8 bg-gray-950 text-gray-100"
+    >
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +32,9 @@ export default function Services({ id }: { id: string }) {
         ))}
       </div>
 
-      <ScrollIndicator target="#howtohelp" label="Ver mais" />
+      <div className="w-full flex justify-center mt-12">
+        <ScrollIndicator target="#howtohelp" label="Ver mais" />
+      </div>
     </section>
   );
 }
