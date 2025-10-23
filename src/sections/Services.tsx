@@ -1,89 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Layout,
-  Smartphone,
-  Database,
-  Server,
-  Cloud,
-  Lock,
-  Wrench,
-  Cpu,
-  Code,
-} from "lucide-react";
-import AtomsAnimation from "@/components/AtomsAnimation";
-import ScrollIndicator from "@/components/ScrollIndicator"; 
-
-const topServices = [
-  {
-    icon: "/img/web-development-svgrepo-com.svg",
-    title: "Desenvolvimento Frontend",
-    desc: "Criação de interfaces modernas e responsivas, focando em experiência do usuário, performance e acessibilidade.",
-  },
-  {
-    icon: "/img/development-svgrepo-com.svg",
-    title: "Desenvolvimento Backend",
-    desc: "Desenvolvimento de APIs robustas, integrações e lógica de servidor com NestJS, TypeORM, Prisma e Express.",
-  },
-];
-
-const services = [
-  {
-    icon: <Layout className="w-6 h-6 text-blue-400" />,
-    title: "Desenvolvimento de Interfaces",
-    desc: "Criação de interfaces modernas, responsivas e acessíveis.",
-  },
-  {
-    icon: <Smartphone className="w-6 h-6 text-purple-400" />,
-    title: "Design Responsivo",
-    desc: "Layout otimizado para qualquer dispositivo ou tela.",
-  },
-  {
-    icon: <Code className="w-6 h-6 text-pink-400" />,
-    title: "Componentes Reutilizáveis",
-    desc: "Desenvolvimento modular e otimizado com React e ShadCN.",
-  },
-  {
-    icon: <Server className="w-6 h-6 text-green-400" />,
-    title: "APIs Escaláveis",
-    desc: "Criação de APIs REST com NestJS e Node.js.",
-  },
-  {
-    icon: <Database className="w-6 h-6 text-yellow-400" />,
-    title: "Banco de Dados",
-    desc: "Integração com PostgreSQL, Prisma e TypeORM.",
-  },
-  {
-    icon: <Cloud className="w-6 h-6 text-cyan-400" />,
-    title: "Deploy em Nuvem",
-    desc: "Deploy automatizado em plataformas como Vercel e Railway.",
-  },
-  {
-    icon: <Lock className="w-6 h-6 text-red-400" />,
-    title: "Autenticação Segura",
-    desc: "Login com JWT, OAuth e integração com Auth providers.",
-  },
-  {
-    icon: <Wrench className="w-6 h-6 text-orange-400" />,
-    title: "Integrações",
-    desc: "Conexão com APIs externas e sistemas legados.",
-  },
-  {
-    icon: <Cpu className="w-6 h-6 text-indigo-400" />,
-    title: "Performance e Otimização",
-    desc: "Monitoramento, caching e otimização de queries.",
-  },
-];
+import ServiceCard from "@/components/ServiceCard";
+import ScrollIndicator from "@/components/ScrollIndicator";
+import { topServices, services } from "@/data/servicesData";
 
 export default function Services({ id }: { id: string }) {
   return (
-    <section
-      id={id}
-      className="relative min-h-screen flex flex-col justify-center items-center py-20 px-8 bg-gray-950 text-gray-100"
-    >
-      <AtomsAnimation />
-
+    <section id={id} className="relative min-h-screen flex flex-col justify-center items-center py-20 px-8 bg-gray-950 text-gray-100">
+      
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -96,80 +21,14 @@ export default function Services({ id }: { id: string }) {
       {/* Top cards lado a lado */}
       <div className="flex flex-col md:flex-row gap-6 max-w-4xl w-full mb-12">
         {topServices.map((card) => (
-          <motion.div
-            key={card.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0px 0px 25px rgba(59,130,246,0.5)",
-            }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="relative p-6 bg-gray-800 rounded-2xl shadow-lg overflow-hidden
-             transition-all duration-200 flex-1 flex flex-col items-center text-center"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-            <motion.img
-              src={card.icon}
-              alt={card.title}
-              className="w-12 h-12 mb-4 relative z-10 opacity-90 hover:opacity-100 transition-opacity duration-300"
-              animate={{ y: [0, -6, 0] }}
-              whileHover={{ rotate: [0, 8, -8, 0], scale: 1.1 }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-            <h3 className="text-lg font-semibold text-blue-400 mb-2 relative z-10">
-              {card.title}
-            </h3>
-            <p className="text-gray-400 relative z-10">{card.desc}</p>
-          </motion.div>
+          <ServiceCard key={card.title} {...card} isTopCard />
         ))}
       </div>
 
       {/* Grid dos outros serviços */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
-        {services.map((service, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.05 }}
-            viewport={{ once: true }}
-            whileHover={{
-              scale: 1.07,
-              boxShadow: "0px 0px 25px 5px rgba(0,150,255,0.4)",
-            }}
-            className="relative bg-[#11121a] p-8 rounded-2xl overflow-hidden border border-blue-500/10 transition-all duration-300 group z-10"
-          >
-            {/* Efeito elétrico */}
-            <motion.div
-              className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              animate={{
-                background: [
-                  "radial-gradient(circle at 20% 20%, rgba(0,150,255,0.15) 0%, transparent 80%)",
-                  "radial-gradient(circle at 80% 80%, rgba(0,150,255,0.2) 0%, transparent 80%)",
-                  "radial-gradient(circle at 50% 50%, rgba(0,150,255,0.3) 0%, transparent 90%)",
-                ],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 2,
-                ease: "easeInOut",
-              }}
-            />
-
-            <div className="relative z-10 flex items-center mb-4">
-              {service.icon}
-            </div>
-            <h3 className="relative z-10 text-xl font-semibold mb-2 text-blue-400">
-              {service.title}
-            </h3>
-            <p className="relative z-10 text-gray-400 text-sm">{service.desc}</p>
-          </motion.div>
+        {services.map((card, i) => (
+          <ServiceCard key={i} {...card} />
         ))}
       </div>
 
