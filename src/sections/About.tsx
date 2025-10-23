@@ -4,13 +4,11 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
 export default function About({ id }: { id: string }) {
-  // Variantes para título e parágrafo
   const fadeUpFast: Variants = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
-  // Variantes para os cards surgindo de lados opostos
   const leftCard: Variants = {
     hidden: { opacity: 0, x: -150 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
@@ -26,7 +24,6 @@ export default function About({ id }: { id: string }) {
       id={id}
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100"
     >
-      {/* Título mágico */}
       <motion.h2
         variants={fadeUpFast}
         initial="hidden"
@@ -37,7 +34,6 @@ export default function About({ id }: { id: string }) {
         Sobre mim
       </motion.h2>
 
-      {/* Parágrafo de introdução */}
       <motion.p
         variants={fadeUpFast}
         initial="hidden"
@@ -45,17 +41,21 @@ export default function About({ id }: { id: string }) {
         viewport={{ once: false, amount: 0.3 }}
         className="max-w-3xl text-center mb-12 text-lg text-gray-200 leading-relaxed drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
       >
-        Desenvolvedor Web com paixão por criar experiências digitais interativas e eficientes. Combinando conhecimento técnico com visão criativa para entregar projetos de alto impacto.
+        Desenvolvedor Web com paixão por criar experiências digitais interativas
+        e eficientes. Combinando conhecimento técnico com visão criativa para
+        entregar projetos de alto impacto.
       </motion.p>
 
-      {/* Cards com animação dos lados */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
         <motion.div
           variants={leftCard}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          whileHover={{ scale: 1.04, boxShadow: "0px 0px 18px rgba(59,130,246,0.3)" }}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0px 0px 18px rgba(59,130,246,0.3)",
+          }}
           transition={{ duration: 0.3 }}
           className="relative p-6 bg-gray-800/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-200 backdrop-blur-sm border border-gray-700/40"
         >
@@ -64,13 +64,30 @@ export default function About({ id }: { id: string }) {
             Quem Sou Eu
           </h3>
           <p className="text-gray-300 leading-relaxed text-justify relative z-10">
-            Me chamo <strong>Yrmih Ian Gonçalves de Lima</strong>, tenho 30 anos e sou de <strong>Ananindeua - PA</strong>. Estudo <strong>Análise e Desenvolvimento de Sistemas</strong> na Universidade Estácio de Sá.
-            <br /><br />
-            Estagiei por 2 anos na <strong>Defensoria Pública do Estado do Pará</strong> como desenvolvedor Front-end, onde desenvolvi e implementei WebApps, SPAs, CSR e SSR utilizando <strong>Next.js, TypeScript, TailwindCSS, ShadCN + Zod e React Hook Form</strong>.
-            <br /><br />
-            Também atuo com frameworks server-side como <strong>NestJS, TypeORM, Prisma</strong> e <strong>Express</strong>, além de integrações com bancos <strong>PostgreSQL</strong> e <strong>MySQL</strong> via <strong>Docker</strong>.
-            <br /><br />
-            Atualmente, estudo aplicações em nuvem com <strong>AWS</strong> e trabalho como <strong>Desenvolvedor Fullstack Freelancer</strong>.
+            Me chamo <strong>Yrmih Ian Gonçalves de Lima</strong>, tenho 30 anos
+            e sou de <strong>Ananindeua - PA</strong>. Estudo{" "}
+            <strong>Análise e Desenvolvimento de Sistemas</strong> na
+            Universidade Estácio de Sá.
+            <br />
+            <br />
+            Estagiei por 2 anos na{" "}
+            <strong>Defensoria Pública do Estado do Pará</strong> como
+            desenvolvedor Front-end, onde desenvolvi e implementei WebApps,
+            SPAs, CSR e SSR utilizando{" "}
+            <strong>
+              Next.js, TypeScript, TailwindCSS, ShadCN + Zod e React Hook Form
+            </strong>
+            .
+            <br />
+            <br />
+            Também atuo com frameworks server-side como{" "}
+            <strong>NestJS, TypeORM, Prisma</strong> e <strong>Express</strong>,
+            além de integrações com bancos <strong>PostgreSQL</strong> e{" "}
+            <strong>MySQL</strong> via <strong>Docker</strong>.
+            <br />
+            <br />
+            Atualmente, estudo aplicações em nuvem com <strong>AWS</strong> e
+            trabalho como <strong>Desenvolvedor Fullstack Freelancer</strong>.
           </p>
         </motion.div>
 
@@ -79,7 +96,10 @@ export default function About({ id }: { id: string }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          whileHover={{ scale: 1.04, boxShadow: "0px 0px 18px rgba(59,130,246,0.3)" }}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0px 0px 18px rgba(59,130,246,0.3)",
+          }}
           transition={{ duration: 0.3 }}
           className="relative p-6 bg-gray-800/70 rounded-2xl shadow-lg overflow-hidden transition-all duration-200 backdrop-blur-sm border border-gray-700/40"
         >

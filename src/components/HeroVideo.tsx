@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function HeroVideo() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
-      {/* Overlay de brilho pulsante */}
       <motion.div
         className="absolute inset-0 z-10 pointer-events-none"
         animate={{
@@ -23,10 +22,7 @@ export default function HeroVideo() {
         }}
       />
 
-      {/* Filtro escuro */}
       <div className="absolute inset-0 bg-black/50 z-20" />
-
-      {/* === VIDEOS === */}
 
       {/* Desktop */}
       <motion.video
@@ -45,7 +41,10 @@ export default function HeroVideo() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       >
-        <source src="/video/Mystical_Panther_Emerges_From_Darkness.mp4" type="video/mp4" />
+        <source
+          src="/video/Mystical_Panther_Emerges_From_Darkness.mp4"
+          type="video/mp4"
+        />
       </motion.video>
 
       {/* Tablet / iPhones */}
