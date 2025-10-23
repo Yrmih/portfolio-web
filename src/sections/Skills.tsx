@@ -18,7 +18,6 @@ export default function Skills({ id }: SkillsProps) {
     exit: { opacity: 0, y: -30, transition: { duration: 0.4 } },
   };
 
-  // Categorias principais (grandes)
   const bigCategories = ["Frontend", "Backend", "DevOps / Cloud", "API / Tools"];
   const smallCategories = categories.filter((c) => !bigCategories.includes(c));
 
@@ -33,7 +32,7 @@ export default function Skills({ id }: SkillsProps) {
         Minhas Stacks
       </h2>
 
-      {/* Grandes categorias lado a lado */}
+      {/* Grandes categorias */}
       <div className="grid gap-10 w-full max-w-7xl" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
         {bigCategories.map((category) => (
           <motion.div
@@ -71,7 +70,7 @@ export default function Skills({ id }: SkillsProps) {
         ))}
       </div>
 
-      {/* Categorias menores lado a lado */}
+      {/* Categorias menores */}
       <div className="grid gap-8 mt-12 w-full max-w-7xl" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))" }}>
         {smallCategories.map((category) => (
           <motion.div
@@ -108,6 +107,21 @@ export default function Skills({ id }: SkillsProps) {
           </motion.div>
         ))}
       </div>
+
+      <style jsx>{`
+        @media (max-width: 640px) {
+          .grid div > .relative {
+            padding: 2px 4px !important;
+          }
+          .grid div > .relative .w-10 {
+            width: 32px !important;
+            height: 32px !important;
+          }
+          .grid div > .relative span {
+            font-size: 10px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -18,7 +18,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: false, amount: 0.2 }}
       transition={{ delay: index * 0.2, duration: 0.5 }}
     >
-      <div className="h-56 overflow-hidden relative">
+      {/* Pai do Image com position relative */}
+      <div className="relative h-56 overflow-hidden">
         <a href={project.image} target="_blank" rel="noopener noreferrer">
           <Image
             src={project.image}
