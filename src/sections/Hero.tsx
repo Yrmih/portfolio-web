@@ -24,6 +24,19 @@ export default function Hero() {
         >
           <source src="/video/panther.mp4" type="video/mp4" />
         </video>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className=""
+          style={{}}
+        >
+          <source
+            src="/video/Mystical_Panther_Emerges_From_Darkness.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
