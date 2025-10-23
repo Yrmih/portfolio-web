@@ -1,20 +1,22 @@
 import { Layout, Smartphone, Database, Server, Cloud, Lock, Wrench, Cpu, Code } from "lucide-react";
+import { CardData } from "@/types/cardDataService";
 
-
-export const topServices = [
+export const topServices: CardData[] = [
   {
     icon: "/img/web-development-svgrepo-com.svg",
+    iconType: "image",
     title: "Desenvolvimento Frontend",
     desc: "Criação de interfaces modernas e responsivas, focando em experiência do usuário, performance e acessibilidade.",
   },
   {
     icon: "/img/development-svgrepo-com.svg",
+    iconType: "image",
     title: "Desenvolvimento Backend",
     desc: "Desenvolvimento de APIs robustas, integrações e lógica de servidor com NestJS, TypeORM, Prisma e Express.",
   },
 ];
 
-export const services = [
+export const services: CardData[] = [
   {
     icon: <Layout className="w-6 h-6 text-blue-400" />,
     title: "Desenvolvimento de Interfaces",

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CardData } from "./servicesData";
+import { CardData } from "@/types/cardDataService";
 
 interface ServiceCardProps extends CardData {
   isTopCard?: boolean;

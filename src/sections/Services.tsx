@@ -18,14 +18,12 @@ export default function Services({ id }: { id: string }) {
         Meus Serviços
       </motion.h2>
 
-      {/* Top cards lado a lado */}
       <div className="flex flex-col md:flex-row gap-6 max-w-4xl w-full mb-12">
         {topServices.map((card) => (
           <ServiceCard key={card.title} {...card} isTopCard />
         ))}
       </div>
 
-      {/* Grid dos outros serviços */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
         {services.map((card, i) => (
           <ServiceCard key={i} {...card} />
