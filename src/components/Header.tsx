@@ -25,11 +25,13 @@ export default function Header() {
   return (
     <header className="fixed w-full z-50 flex justify-center">
       <div
-        className={`grid grid-cols-2 md:grid-cols-3 items-center w-full max-w-6xl p-4 rounded-lg transition-all
+        className={`grid grid-cols-2 md:grid-cols-3 items-center w-full max-w-6xl 
+          rounded-lg transition-all duration-300
           ${scrolled ? "bg-gray-900/95 shadow-lg" : "bg-gray-900/70"}
+          p-2 sm:p-3 md:p-4   /* 👈 padding menor no mobile */
         `}
       >
-        <div className="text-2xl font-bold text-blue-500 col-span-1">
+        <div className="text-lg sm:text-xl md:text-2xl font-bold text-blue-500 col-span-1">
           Yrmih Ian
         </div>
 
@@ -44,7 +46,7 @@ export default function Header() {
         <div className="md:hidden flex justify-end col-span-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-2xl p-2 rounded hover:bg-gray-800 transition"
+            className="text-xl p-1 rounded hover:bg-gray-800 transition" // 👈 botão menor
           >
             ☰
           </button>
@@ -52,7 +54,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <ul className="md:hidden flex flex-col items-center bg-gray-900/95 space-y-4 py-4 mt-2 rounded-lg">
+        <ul className="md:hidden flex flex-col items-center bg-gray-900/95 space-y-3 py-3 mt-1 rounded-lg text-sm">
           {links.map((link) => (
             <li key={link.href}>
               <NavLink href={link.href}>{link.name}</NavLink>

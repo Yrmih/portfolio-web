@@ -45,7 +45,7 @@ export default function HeroVideo() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
       >
-        <source src="/video/panther.mp4" type="video/mp4" />
+        <source src="/video/Mystical_Panther_Emerges_From_Darkness.mp4" type="video/mp4" />
       </motion.video>
 
       {/* Tablet / iPhones */}
