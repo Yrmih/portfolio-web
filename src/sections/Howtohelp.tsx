@@ -3,14 +3,13 @@
 import { motion } from "framer-motion";
 import { MessageSquare, Settings, TrendingUp } from "lucide-react";
 
-export default function HelpSection({id}: {id: string}) {
+export default function HelpSection({ id }: { id: string }) {
   return (
     <section
       id={id}
       className="min-h-screen flex flex-col justify-center items-center p-8 bg-gray-950 text-gray-100"
     >
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -32,7 +31,8 @@ export default function HelpSection({id}: {id: string}) {
               <div>
                 <p className="font-semibold">Comunicação Eficiente</p>
                 <p className="text-sm text-gray-400">
-                  Interfaces claras e intuitivas que melhoram a experiência do usuário.
+                  Interfaces claras e intuitivas que melhoram a experiência do
+                  usuário.
                 </p>
               </div>
             </li>
@@ -42,7 +42,8 @@ export default function HelpSection({id}: {id: string}) {
               <div>
                 <p className="font-semibold">Gestão Centralizada</p>
                 <p className="text-sm text-gray-400">
-                  Painéis e sistemas integrados que simplificam o controle de dados e processos.
+                  Painéis e sistemas integrados que simplificam o controle de
+                  dados e processos.
                 </p>
               </div>
             </li>
@@ -52,7 +53,8 @@ export default function HelpSection({id}: {id: string}) {
               <div>
                 <p className="font-semibold">Desempenho e Crescimento</p>
                 <p className="text-sm text-gray-400">
-                  Aplicações otimizadas e escaláveis que acompanham o crescimento do seu negócio.
+                  Aplicações otimizadas e escaláveis que acompanham o
+                  crescimento do seu negócio.
                 </p>
               </div>
             </li>
@@ -102,7 +104,15 @@ export default function HelpSection({id}: {id: string}) {
             <span className="text-7xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-white drop-shadow-[0_0_25px_rgba(59,130,246,0.7)]">
               100%
             </span>
-            <p className="text-gray-300 mt-2 text-lg tracking-wide">Personalizado</p>
+            <p
+              className="mt-2 text-lg tracking-wide font-semibold 
+             text-transparent bg-clip-text 
+             bg-gradient-to-r from-blue-400 via-cyan-300 to-white 
+             drop-shadow-[0_0_15px_rgba(0,200,255,0.8)] 
+             animate-pulse"
+            >
+              Profissional
+            </p>
           </motion.div>
         </motion.div>
       </div>
