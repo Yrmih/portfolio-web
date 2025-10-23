@@ -26,7 +26,7 @@ export default function Hero() {
             Yrmih Ian
           </h1>
           <p className="mb-8 text-lg text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]">
-            Desenvolvedor Full Stack — criando experiências digitais com
+            Desenvolvedor Full Stack: criando experiências digitais com
             criatividade e código limpo.
           </p>
 
