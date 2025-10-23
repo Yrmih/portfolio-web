@@ -3,6 +3,7 @@
 import { ArrowDown, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import HeroVideo from "@/components/HeroVideo";
 
 export default function Hero() {
   return (
@@ -10,39 +11,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black"
     >
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover scale-[1.2] hidden md:block"
-          style={{
-            transformOrigin: "center",
-            filter: "brightness(1.6)",
-          }}
-        >
-          <source src="/video/panther.mp4" type="video/mp4" />
-        </video>
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0w-full h-full object-cover scale-[1.2] md:hidden"
-          style={{
-            transformOrigin: "center",
-            filter: "brightness(1.6)",
-            objectPosition: "center",
-          }}
-        >
-          <source
-            src="/video/Mystical_Panther_Emerges_From_Darkness.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
+      <HeroVideo />
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6 md:px-16">
         <motion.div
@@ -125,7 +94,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Foto */}
         <motion.div
           className="flex justify-center items-center"
           initial={{ opacity: 0, y: -20 }}
@@ -161,7 +129,7 @@ export default function Hero() {
           textShadow: "0px 0px 14px rgba(0,200,255,0.8)",
         }}
         transition={{ duration: 0.3 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-blue-400 hover:text-blue-300 font-medium tracking-wide cursor-pointer group z-20"
+        className="absolute bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center text-blue-400 hover:text-blue-300 font-medium tracking-wide cursor-pointer group z-20"
       >
         <span className="relative z-10 mb-2 text-lg group-hover:animate-pulse">
           Ver mais
