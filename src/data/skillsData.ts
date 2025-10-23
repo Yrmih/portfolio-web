@@ -1,4 +1,4 @@
-// src/dados/skillsData.ts
+
 import { Skill } from "@/types/skilltypes";
 
 export const skills: Skill[] = [

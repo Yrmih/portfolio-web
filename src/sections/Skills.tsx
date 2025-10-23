@@ -3,15 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AtomsAnimation from "@/components/AtomsAnimation";
-
-import { skills, }
+import { skills } from "@/data/skillsData";
 
 interface SkillsProps {
   id: string;
 }
 
 export default function Skills({ id }: SkillsProps) {
-  // Agrupa skills por categoria
+  
   const categories = Array.from(new Set(skills.map((skill) => skill.category)));
 
   return (
