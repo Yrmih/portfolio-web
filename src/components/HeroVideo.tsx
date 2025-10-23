@@ -81,6 +81,8 @@ export default function HeroVideo() {
         className="block sm:hidden absolute top-0 left-0 w-full h-full"
         style={{
           objectFit: "contain",
+          transform: "scale(1.35)",
+          objectPosition: "center 111px",
           backgroundColor: "black",
           filter: "brightness(1.3)",
         }}
